@@ -39,7 +39,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<span class="menu"><img src="images/menu.png" alt=""></span>
 					<ul class="nav1">
 						<li class="hvr-sweep-to-bottom">
-								<a href="../Homepage/index.php">CUSAT-SOE<i>Goto Placement Homepage</i></a>
+								<a href="../Homepage/index.php">DBCE<i>Goto Placement Homepage</i></a>
 							</li>
 						<li class="hvr-sweep-to-bottom">
 								<a href="index.php">Home<i>Get the Overview of the Site</i></a>

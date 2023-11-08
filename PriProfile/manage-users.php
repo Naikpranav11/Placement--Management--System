@@ -44,7 +44,7 @@
 		  ?>
         </header>
         <div class="profile-photo-container">
-          <img src="images/b119.jpg" alt="Profile Photo" class="img-responsive">
+          <!-- <img src="images/b119.jpg" alt="Profile Photo" class="img-responsive"> -->
           <div class="profile-photo-overlay"></div>
         </div>
         <!-- Search box -->
@@ -75,7 +75,7 @@
             <nav class="templatemo-top-nav col-lg-12 col-md-12">
               <ul class="text-uppercase">
                   <li>
-                  <a href="../../Homepage/index.php">Home CUSAT-SOE</a>
+                  <a href="../../Homepage/index.php">Home DBCE</a>
                 </li>
                 <li>
                   <a href="../../Drives/index.php">Drives Homepage</a>
@@ -209,8 +209,7 @@ $prev = $currentpage-1;
 </ul>
 </div>
           <footer class="text-right">
-            <p>Copyright &copy; 2015 CUSAT-SOE |
-              <a href="http://znumerique.azurewebsites.net" target="_parent">HyperMine</a></p>
+
           </footer>
         </div>
       </div>

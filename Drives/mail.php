@@ -40,7 +40,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<span class="menu"><img src="images/menu.png" alt=""></span>
 					<ul class="nav1">
 						<li class="hvr-sweep-to-bottom">
-								<a href="../Homepage/index.php">CUSAT-SOE<i>Goto Placement Homepage</i></a>
+								<a href="../Homepage/index.php">DBCE<i>Goto Placement Homepage</i></a>
 							</li>
 						<li class="hvr-sweep-to-bottom">
 								<a href="index.php">Home<i>Get the Overview of the Site</i></a>
@@ -83,15 +83,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-6 mail-grid-left wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 					<h3>Contact Us</h3>	
 					<p></p>				
-					<h4>Cochin University Of Science And  Technology</h4>
-					<p>South Kalamessery,
-						<span>Kochi, Kerala</span>
-						India IN-682 022
-					</p>
+					<h4>Don Bosco College of Engineering</h4>
+					<p>7XR9+QJP, Murida Rd
+							<span>Fatorda, Margao, Goa 403602</span>
+						</p>
 					<h4>Get In Touch</h4>
-					<p>Telephone: +91 830-1979790/223365
-						<span>FAX: +91 830-1979790</span>
-						E-mail: <a href="mailto:soumen1696@gmail.com">soumen1696@gmail.com</a>
+
+						E-mail: <a href="mailto:naikpranav110803@gmail.com">naikpranav110803@gmail.com</a>
 					</p>
 				</div>
 				<div class="col-md-6 contact-form wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
@@ -139,16 +137,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-3 footer-middle wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 					<h3>Address</h3>
 					<div class="address">
-						<p>CUSAT-SOE
-							<span>South Kalamessery, Kochi</span>
+						<p>DBCE Goa,7XR9+QJP, Murida Rd
+							<span>Fatorda, Margao, Goa 403602</span>
 						</p>
 					</div>
 					<div class="phone">
-						<p>1234567890</p>
+						<p>7720996607</p>
 					</div>
 				</div>
 				<div class="col-md-3 footer-right  wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-					<h6 style="color: white">Cochin University Of Science And  Technology</h6>
+					<h6 style="color: white">Don Bosco College of Engineering</h6>
 					<h4>
 						<a href="../Homepage/index.php" style="color: white">Placement Management System</a>
 					</h4>
@@ -163,8 +161,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<!-- container -->
 			<div class="container">
 				<div class="copyright-left wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-					 <p>Copyright &copy; 2018 CUSAT-SOE | Developed by
-              <a href="http://znumerique.azurewebsites.net" target="_parent">HyperMine</a>
+
 				</div>
 				<div class="copyright-right wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 					<ul>

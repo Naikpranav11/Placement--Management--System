@@ -44,7 +44,7 @@
 		  ?>
         </header>
         <div class="profile-photo-container">
-          <img src="images/b119.jpg" alt="Profile Photo" class="img-responsive">
+          <!-- <img src="images/b119.jpg" alt="Profile Photo" class="img-responsive"> -->
           <div class="profile-photo-overlay"></div>
         </div>
         <!-- Search box -->
@@ -74,7 +74,7 @@
             <nav class="templatemo-top-nav col-lg-12 col-md-12">
               <ul class="text-uppercase">
                    <li>
-                  <a href="../../Homepage/index.php">Home CUSAT-SOE</a>
+                  <a href="../../Homepage/index.php">Home DBCE</a>
                 </li>
                 <li>
                   <a href="../../Drives/index.php">Drives Homepage</a>
@@ -94,7 +94,7 @@
             <div class="templatemo-content-widget white-bg col-2">
               <i class="fa fa-times"></i>
               <div class="square"></div>
-              <h2 class="templatemo-inline-block">Welcome to CUSAT-SOE</h2><hr>
+              <h2 class="templatemo-inline-block">Welcome to DBCE</h2><hr>
               <p>There is a worth for everything so do logging in here. The Use of this is, You can View Student details, Check their Eligibility Criteria and U cvan look up drive details</p>
               <p><a href="Students Eligibility.php">Check Students Eligibility</a></p>
 
@@ -225,8 +225,8 @@ echo "</h3>";
           </div> <!-- Second row ends -->
 
           <footer class="text-right">
-            <p>Copyright &copy; 2018 CUSAT-SOE | Developed by
-              <a href="http://znumerique.azurewebsites.net" target="_parent">HyperMine</a>
+            <p>Copyright &copy; 2023 DBCE | Developed by
+              <a href="http://znumerique.azurewebsites.net" target="_parent">psr</a>
             </p>
           </footer>
         </div>

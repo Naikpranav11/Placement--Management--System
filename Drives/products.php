@@ -60,7 +60,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<ul class="nav1">
 							
 							<li class="hvr-sweep-to-bottom">
-								<a href="../Homepage/index.php">CUSAT-SOE<i>Goto Placement Homepage</i></a>
+								<a href="../Homepage/index.php">DBCE<i>Goto Placement Homepage</i></a>
 							</li>
 							<li class="hvr-sweep-to-bottom">
 								<a href="index.php">Home<i>Get the Overview of the Site</i></a>
@@ -256,18 +256,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</form>
 				</div>
 				<div class="col-md-3 footer-middle wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-					<h3>Address</h3>
-					<div class="address">
-						<p>CUSAT, South Kalamessery
-							<span>Kochi,Keral</span>
-						</p>
-					</div>
-					<div class="phone">
-						<p>+91 8301 979790/223365</p>
-					</div>
+
 				</div>
 				<div class="col-md-3 footer-right  wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-					<h6 style="color: white">Cochin University of Science And Technology</h6>
+					<h6 style="color: white">DBCE</h6>
 					<h4>
 						<a href="../Homepage/index.php" style="color: white">Placement Management System</a>
 					</h4>
@@ -282,8 +274,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<!-- container -->
 			<div class="container">
 				<div class="copyright-left wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-					 <p>Copyright &copy; 2018 CUSAT-SOE | Developed by
-              <a href="http://znumerique.azurewebsites.net" target="_parent">HyperMine Technologies</a>
+	
 				</div>
 				<div class="copyright-right wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 					<ul>

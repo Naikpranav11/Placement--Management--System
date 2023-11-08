@@ -106,7 +106,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="about-bottom-grids">
 				<div class="col-md-6 about-bottom-left wow fadeInLeft animated animated" data-wow-delay="0.5s" style="visibility: visible; -webkit-animation-delay: 0.5s;">
 					<h4>What We Offer?</h4>
-					<p>The Institute offers bachelors degree courses in 6 disciplines in Engineering viz. Computer Science and Engineering, Information Technology, Electronics and communication, Electrical and Electronics, Civil, Mechanical,Safety and Fire Engineering ,and 03  post graduate courses viz. M.Tech in Computer Science, M.Tech in Electronics and Master of Business Administration (MBA). The Institute has facilities for doctoral research in Computer Science and Electronics. 
+					<p>The Institute offers bachelors degree courses in 4 disciplines in Engineering viz. Computer Science and Engineering, Electronics and Telecommunication,, Civil, Mechanical Engineering ,and 01  post graduate courses viz. ME in CAD. The Institute has facilities for doctoral research in Computer Science and Electronics. 
 					</p>
 				</div>
 				<div class="col-md-6 about-bottom-left about-bottom-right wow fadeInRight animated animated" data-wow-delay="0.5s" style="visibility: visible; -webkit-animation-delay: 0.5s;">
@@ -194,7 +194,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 				</div>
 				<div class="col-md-3 footer-right  wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-					<h6 style="color: white">Cochin University of Science And Technology</h6>
+					<h6 style="color: white">DBCE</h6>
 					<h4>
 						<a href="../Homepage/index.php" style="color: white">Placement Management System</a>
 					</h4>

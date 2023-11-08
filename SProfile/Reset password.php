@@ -108,17 +108,7 @@ if(isset($_SESSION['reset']))
 						</li>
 					</ul>
 				</div>
-				<div class="col-md-3 get_in_touch ftr">
-					<h3>GET IN TOUCH</h3>
-					<p>University Hills</p>
-					<p>South Kalamessery, Kochi, India</p>
-					<p>0830-1979790/223365</p>
-					<a href="mailto:soumen1696@gmail.com">soumen1696@gmail.com</a>
-				</div>
-				<div class="col-md-3 ftr-logo">
-					<p>Copyright &copy; 2018 CUSAT-SOE | Developed by
-              <a href="http://znumerique.azurewebsites.net" target="_parent">HyperMine</a>
-				</div>
+
 				</div>
 				<div class="clearfix"></div>
 			</div>

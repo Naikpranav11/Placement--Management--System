@@ -81,10 +81,10 @@
             <nav class="templatemo-top-nav col-lg-12 col-md-12">
               <ul class="text-uppercase">
                 <li>
-                  <a href="../../Homepage/index.php">Home CUSAT-SOE</a>
+                  <a href="../Homepage/index.php">Home DBCE</a>
                 </li>
                 <li>
-                  <a href="../../Drives/index.php">Drives Homepage</a>
+                  <a href="../Drives/index.php">Drives Homepage</a>
                 </li>
                 <li>
                   <a href="Notif.php">Notifications</a>
@@ -101,11 +101,10 @@
             <div class="templatemo-content-widget white-bg col-2">
               <i class="fa fa-times"></i>
               <div class="square"></div>
-              <h2 class="templatemo-inline-block">Welcome to CUSAT-SOE</h2>
+              <h2 class="templatemo-inline-block">Welcome to DBCE</h2>
               <hr>
               <p>Work is Magic and it defines you at every aspect of ur life. As you Work Hard u will become smart and the Irony is Every Smart worker will be a Successfull man where as worthless hardwork is like a monkey finding gold in a sea.
-                <a href="preferences.php""
-                target="_parent">Go and Fill your Details in Preferences Tab</a>
+                <a href="preferences.php" target="_parent">Go and Fill your Details in Preferences Tab</a>
                 </p>
               <p>We have got number of Partners from the companies who are tied up to our college and it is Incresasing. We are doing our Job of getting u Placed and
                 Being a Student its your duty to acompolish ur responsibilities.</p>
@@ -161,7 +160,7 @@
                   </div>
                   <div class="media-body">
                     <h2 class="media-heading text-uppercase">Upcomming Events</h2>
-                    <p>Brace yourself for the Events that will take ur breath away. Get Started and be a Part of CUSAT-SOE Family</p>
+                    <p>Brace yourself for the Events that will take ur breath away. Get Started and be a Part of DBCE Family</p>
                   </div>
                 </div>
               </div>
@@ -221,9 +220,7 @@
           </div>
           <!-- Second row ends -->
           <footer class="text-right">
-            		<p>Copyright &copy; 2018 CUSAT-SOE | Developed by
-              <a href="http://znumerique.azurewebsites.net" target="_parent">HyperMine </a>
-			  </p>
+
           </footer>
         </div>
       </div>
