@@ -38,19 +38,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="top-nav">
 					<span class="menu"><img src="images/menu.png" alt=""></span>
 					<ul class="nav1">
-						<li class="hvr-sweep-to-bottom">
-								<a href="../Homepage/index.php">CUSAT-SOE<i>Goto Placement Homepage</i></a>
-							</li>
-						<li class="hvr-sweep-to-bottom">
-								<a href="index.php">Home<i>Get the Overview of the Site</i></a>
+					<li class="hvr-sweep-to-bottom">
+								<a href="../Homepage/index.php">DBCE Goa T&P<i>Goto Placement Homepage</i></a>
 							</li>
 							<li class="hvr-sweep-to-bottom active">
-								<a href="about.php">About<i>About Us and our Chief Architects</i></a>
+								<a href="index.php">Home<i>Get the Overview of the Site</i></a>
+							</li>
+							<li class="hvr-sweep-to-bottom">
+								<a href="about.php">About<i>About Us and our Cheif Architects</i></a>
 							</li>
 							<li class="hvr-sweep-to-bottom">
 								<a href="products.php">Campus Drives<i>Campus Drives</i></a>
 							</li>
-							
 							<li class="hvr-sweep-to-bottom">
 								<a href="mail.php">Mail Us<i>Get in Touch with us Instantly</i></a>
 							</li>
@@ -89,7 +88,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="jumbotron banner-bottom-left wow fadeInLeft animated animated" data-wow-delay="0.5s" style="visibility: visible; -webkit-animation-delay: 0.5s;">
 					  <h3>Placement and Training Department</h3>
 						<h5></span></h5>
-						<p>Our Institute is located in South Kalamessery, a well known place of learning. Our college is affiliated to Cochin University Of Science  And Technological, Kochi (Kerala), recognized by AICTE, New Delhi, & by Government of Kerala. Within a short span of 47 years we have made our presence felt strongly in this competitive educational sector and we have many firsts to our credit. Our ISO Certification and NBA Accreditation speak of our commitment to quality systems and education. Our credentials are well appreciated by many industries, engineering institutes, professional bodies, government organizations etc. In the recent past our institute has been rated A Grade and is included among “THE BEST ENGINEERING COLLEGES IN INDIA” by Career360, a popular magazine promoted by OUTLOOK Group. 
+						<p>Our Institute is located in Fatorda Goa, a well known place of learning. Our college is affiliated to Goa University, recognized by AICTE, New Delhi, & by Government of Goa and also NBA accredited. Within a short span of 10 years we have made our presence felt strongly in this competitive educational sector and we have many firsts to our credit. Our ISO Certification and NBA Accreditation speak of our commitment to quality systems and education. Our credentials are well appreciated by many industries, engineering institutes, professional bodies, government organizations etc. In the recent past our institute has been rated A Grade and is included among “THE BEST ENGINEERING COLLEGES IN GOA" by Career360, a popular magazine promoted by OUTLOOK Group. 
 						</p>
 					</div>
 				</div>
@@ -103,7 +102,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="about-bottom">
 		<!-- container -->
 		<div class="container">
-			<h3 class="wow fadeInRight animated" style="visibility: visible;">A New Generation of CUSAT</h3>
+			<h3 class="wow fadeInRight animated" style="visibility: visible;">A New Generation of DBCE Goa</h3>
 			<div class="about-bottom-grids">
 				<div class="col-md-6 about-bottom-left wow fadeInLeft animated animated" data-wow-delay="0.5s" style="visibility: visible; -webkit-animation-delay: 0.5s;">
 					<h4>What We Offer?</h4>
@@ -126,10 +125,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="team">
 		<!-- container -->
 		<div class="container">
-			<div class="team-info">
+			<!-- <div class="team-info">
 				<h3 class="wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">Meet Our Team</h3>
 				<div class="team-grids">
-					<div class="col-md-3 team-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+					<!-- <div class="col-md-3 team-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 						<img src="images/b117.jpg" alt="">
 						<h6>Renumol V.G</h6>
 						<p> HOD IT Department</p>
@@ -150,9 +149,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<p>Placement Incharge</p>
 					</div>
 					<div class="clearfix"> </div>
-				</div>
+				</div> -->
 			</div>
-		</div>
+		</div> -->
 		<!-- //container -->
 	</div>
 	<!-- //team -->
@@ -186,12 +185,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-3 footer-middle wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 					<h3>Address</h3>
 					<div class="address">
-						<p>CUSAT, South Kalamessery
-							<span>Kochi, Kerala</span>
+						<p>DBCE Goa,7XR9+QJP, Murida Rd
+							<span>Fatorda, Margao, Goa 403602</span>
 						</p>
 					</div>
 					<div class="phone">
-						<p>+91 830 1979790/223365</p>
+						<p>7720996607</p>
 					</div>
 				</div>
 				<div class="col-md-3 footer-right  wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
@@ -209,10 +208,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="copyright">
 			<!-- container -->
 			<div class="container">
-				<div class="copyright-left wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-					 <p>Copyright &copy; 2018 CUSAT-SOE | Developed by
-              <a href="http://znumerique.azurewebsites.net" target="_parent">HyperMine Technologies</a>
-					</p>
+			<div class="copyright-left wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+					 <p>Copyright &copy; 2023 DBCE Goa | Developed by
+              <a href="http://znumerique.azurewebsites.net" target="_parent">Pranav Naik,Sai Rane,Ralph Rodrigues</a>
 				</div>
 				<div class="copyright-right wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 					<ul>

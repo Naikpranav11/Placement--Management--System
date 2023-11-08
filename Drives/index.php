@@ -42,7 +42,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</span>
 						<ul class="nav1">
 							<li class="hvr-sweep-to-bottom">
-								<a href="../Homepage/index.php">CUSAT-SOE<i>Goto Placement Homepage</i></a>
+								<a href="../Homepage/index.php">DBCE Goa T&P<i>Goto Placement Homepage</i></a>
 							</li>
 							<li class="hvr-sweep-to-bottom active">
 								<a href="index.php">Home<i>Get the Overview of the Site</i></a>
@@ -265,16 +265,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-3 footer-middle wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 					<h3>Address</h3>
 					<div class="address">
-						<p>CUSAT, South Kalamessery
-							<span>Kochi,Kerala</span>
+						<p>DBCE Goa,7XR9+QJP, Murida Rd
+							<span>Fatorda, Margao, Goa 403602</span>
 						</p>
 					</div>
 					<div class="phone">
-						<p>+91 830 1979790/223365</p>
+						<p>7720996607</p>
 					</div>
 				</div>
 				<div class="col-md-3 footer-right  wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-					<h6 style="color: white">Cochin University Of Science And Technology</h6>
+					<h6 style="color: white">Don Bosco College of Engineering Goa</h6>
 					<h4>
 						<a href="../Homepage/index.php" style="color: white">Placement Management System</a>
 					</h4>
@@ -289,8 +289,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<!-- container -->
 			<div class="container">
 				<div class="copyright-left wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-					 <p>Copyright &copy; 2018 CUSAT-SOE | Developed by
-              <a href="http://znumerique.azurewebsites.net" target="_parent">HyperMine Technologies</a>
+					 <p>Copyright &copy; 2023 DBCE Goa | Developed by
+              <a href="http://znumerique.azurewebsites.net" target="_parent">Pranav Naik,Sai Rane,Ralph Rodrigues</a>
 				</div>
 				<div class="copyright-right wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 					<ul>
