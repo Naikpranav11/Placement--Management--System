@@ -33,6 +33,46 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script>
+    document.addEventListener('DOMContentLoaded', function (){
+    var seeMoreButtons = document.querySelectorAll('.see-button');
+
+    seeMoreButtons.forEach(function (button) {
+        button.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            // Get the drive ID from the data attribute
+            var driveId = button.getAttribute('data-drive-id');
+
+            // Make an AJAX request to get drive details
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', '../SProfile/get_drive_details.php?drive_id=' + driveId, true);
+
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 400) {
+                    // Create a container for the details
+                    var detailsContainer = document.createElement('div');
+                    detailsContainer.innerHTML = xhr.responseText;
+                    // Apply styles to the details container
+                    detailsContainer.style.border = '1px solid #ccc';
+                    detailsContainer.style.padding = '10px';
+                    detailsContainer.style.marginTop = '10px';
+                    detailsContainer.style.fontWeight = 'bold';
+
+                    // Append the details container below the button
+                    button.parentNode.insertBefore(detailsContainer, button.nextSibling);
+                } else {
+                    console.error('Request failed with status', xhr.status);
+                }
+            };
+
+            xhr.send();
+        });
+    });
+
+});
+
+</script>
 
   </head>
   <body>
@@ -47,7 +87,7 @@
 		  ?>
         </header>
         <div class="profile-photo-container">
-          <img src="images/profile-photo.jpg" alt="Profile Photo" class="img-responsive">
+          <!-- <img src="images/profile-photo.jpg" alt="Profile Photo" class="img-responsive"> -->
           <div class="profile-photo-overlay"></div>
         </div>
         <!-- Search box -->
@@ -119,7 +159,7 @@
 							<h4>Infosys</h4>
 							<p>Details</p>
 							<div class="see-button">
-								<a class="btn btn-primary btn-lg see-button hvr-shutter-out-horizontal" href="2.php" role="button">See More</a>
+								<a class="btn btn-primary btn-lg see-button hvr-shutter-out-horizontal" href="infosys" role="button">See More</a>
 							</div>
 						</div>
 						<div class="clearfix"></div>
@@ -131,7 +171,7 @@
 						<div class="products-text">
 							<h4>Google</h4>
 							<p></p>
-							<a class="btn btn-primary btn-lg see-button hvr-shutter-out-horizontal" href="3.php" role="button">See More</a>
+							<a class="btn btn-primary btn-lg see-button hvr-shutter-out-horizontal" href="google" role="button">See More</a>
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -154,9 +194,9 @@
 							<p>5.</p>
 						</div>
 						<div class="products-text">
-							<h4>Directi </h4>
+							<h4>facebook</h4>
 							<p></p>
-							<a class="btn btn-primary btn-lg see-button hvr-shutter-out-horizontal" href="5.php" role="button">See More</a>
+							<a class="btn btn-primary btn-lg see-button hvr-shutter-out-horizontal" href="facebook" role="button">See More</a>
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -167,7 +207,7 @@
 						<div class="products-text">
 							<h4>Intel</h4>
 							<p></p>
-							<a class="btn btn-primary btn-lg see-button hvr-shutter-out-horizontal" href="6.php" role="button">See More</a>
+							<a class="btn btn-primary btn-lg see-button hvr-shutter-out-horizontal" href="intel" role="button">See More</a>
 						</div>
 						<div class="clearfix"></div>
 					</div>

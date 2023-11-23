@@ -47,15 +47,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li class="hvr-sweep-to-bottom active">
 								<a href="index.php">Home<i>Get the Overview of the Site</i></a>
 							</li>
-							<li class="hvr-sweep-to-bottom">
+							<!-- <li class="hvr-sweep-to-bottom">
 								<a href="about.php">About<i>About Us and our Cheif Architects</i></a>
-							</li>
+							</li> -->
 							<li class="hvr-sweep-to-bottom">
 								<a href="products.php">Campus Drives<i>Campus Drives</i></a>
 							</li>
-							<li class="hvr-sweep-to-bottom">
+							<!-- <li class="hvr-sweep-to-bottom">
 								<a href="mail.php">Mail Us<i>Get in Touch with us Instantly</i></a>
-							</li>
+							</li> -->
 							<div class="clearfix"></div>
 						</ul>
 						<!-- script-for-menu -->

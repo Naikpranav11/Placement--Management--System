@@ -5,7 +5,7 @@
 	<!--favicon-->
 		<link rel="shortcut icon" href="favicon.ico" type="image/icon">
 		<link rel="icon" href="favicon.ico" type="image/icon">
-<title>CUSAT-SOE | Contact Us</title>
+<title>DBCE| Contact Us</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Tillage Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 

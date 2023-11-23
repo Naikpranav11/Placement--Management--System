@@ -14,7 +14,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Principal - Student Details</title>
+    <title>TPO</title>
     <meta name="description" content="">
     <meta name="author" content="templatemo">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700' rel='stylesheet' type='text/css'>
@@ -42,7 +42,7 @@
 		  ?>
         </header>
         <div class="profile-photo-container">
-          <img src="images/profile-photo.jpg" alt="Profile Photo" class="img-responsive">
+          <!-- <img src="images/profile-photo.jpg" alt="Profile Photo" class="img-responsive"> -->
           <div class="profile-photo-overlay"></div>
         </div>
         <!-- Search box -->
@@ -60,8 +60,8 @@
             <li><a href="login.php"><i class="fa fa-home fa-fw"></i>Dashboard</a></li>
             <li><a href="Placement Drives.php"><i class="fa fa-home fa-fw"></i>Placement Drives</a></li>
             <li><a href="manage-users.php"><i class="fa fa-users fa-fw"></i>View Students</a></li>
-            <li><a href="queries.php"><i class="fa fa-users fa-fw"></i>Queries</a></li>
-            <li><a href="Students Eligibility.php" class="active"><i class="fa fa-sliders fa-fw"></i>Students Eligibility Status</a></li>
+            <!-- <li><a href="queries.php"><i class="fa fa-users fa-fw"></i>Queries</a></li> -->
+            <li><a href="Students Eligibility.php" class="active"><i class="fa fa-sliders fa-fw"></i>Add Users</a></li>
             <li><a href="logout.php"><i class="fa fa-eject fa-fw"></i>Sign Out</a></li>
           </ul>
         </nav>
@@ -72,9 +72,9 @@
           <div class="row">
             <nav class="templatemo-top-nav col-lg-12 col-md-12">
               <ul class="text-uppercase">
-               <li><a href="../../Homepage/index.php">Home CUSAT-SOE</a></li>
-                <li><a href="">Drives Home</a></li>
-                <li><a href="Notif.php">Notifications</a></li>
+               <li><a href="../../Homepage/index.php">Home </a></li>
+                <li><a href="dhome2.php">Drives Home</a></li>
+                <!-- <li><a href="Notif.php">Notifications</a></li> -->
                 <li><a href="Change Password.php">Change Password</a></li>
               </ul>
             </nav>
@@ -82,12 +82,12 @@
         </div>
          <div class="templatemo-content-container">
           <div class="templatemo-content-widget white-bg">
-            <h2 class="margin-bottom-10">ELIGIBILITY CRITERIA</h2>
+            <h2 class="margin-bottom-10">Add HR</h2>
 
-            <form action="eligibility.php" class="templatemo-login-form" method="POST" enctype="multipart/form-data">
+            <form action="insert.php" class="templatemo-login-form" method="POST" enctype="multipart/form-data">
 
               <div class="row form-group">
-                	 <div class="col-lg-6 col-md-6 form-group">
+                	 <!-- <div class="col-lg-6 col-md-6 form-group">
                   <label class="control-label templatemo-block">Branch of Study</label>
                   <select name="Branch" class="form-control">
 					   <option value="">Branch</option>
@@ -98,24 +98,24 @@
                     <option value="ME">ME</option>
                     <option value="CVE">CVE</option>
                   </select>
+                </div> -->
+				<div class="col-lg-6 col-md-6 form-group">
+                  <label for="id">Id</label>
+                  <input type="text" name="id" class="form-control" id="id" placeholder="">
                 </div>
 				<div class="col-lg-6 col-md-6 form-group">
-                  <label for="sslc">SSLC/10th Aggregate</label>
-                  <input type="text" name="sslc" class="form-control" id="sslc" placeholder="">
+                  <label for="username">Username</label>
+                  <input type="text" name="username" class="form-control" id="username" placeholder="">
                 </div>
 				<div class="col-lg-6 col-md-6 form-group">
-                  <label for="Pu">12th/Diploma Aggregate</label>
-                  <input type="text" name="pugg" class="form-control" id="Pu" placeholder="">
-                </div>
-				<div class="col-lg-6 col-md-6 form-group">
-                  <label for="BE">BE Aggregate</label>
-                  <input type="text" name="beagg" class="form-control" id="BE" placeholder="">
+                  <label for="password">Password</label>
+                  <input type="password" name="password" class="form-control" id="password" placeholder="">
                 </div>
                 <div class="col-lg-6 col-md-6 form-group">
-                  <label class="control-label templatemo-block">Current Backlogs</label>
-                  <input type="number" name="curback" class="form-control" placeholder="Numbers">
+                  <label class="control-label templatemo-block">Company Name</label>
+                  <input type="text" name="cname" class="form-control" placeholder="cname">
                 </div>
-				<div class="col-lg-6 col-md-6 form-group">
+				<!-- <div class="col-lg-6 col-md-6 form-group">
                   <label class="control-label templatemo-block">History of Backlogs</label>
                   <select name="hob" class="form-control">
                     <option value="Y/N">Y/N</option>
@@ -134,7 +134,7 @@
                     <option value="3">3</option>
                     <option value="4">4</option>
                   </select>
-                </div>
+                </div> -->
 
 
 
@@ -148,8 +148,7 @@
           </div>
 
           <footer class="text-right">
-             <p>Copyright &copy; 2018 CUSAT-SOE| |
-              <a href="http://znumerique.azurewebsites.net" target="_parent">HyperMine</a></p>
+
           </footer>
         </div>
       </div>

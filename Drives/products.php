@@ -4,7 +4,7 @@
 		<!--favicon-->
 		<link rel="shortcut icon" href="favicon.ico" type="image/icon">
 		<link rel="icon" href="favicon.ico" type="image/icon">
-		<title>CUSAT-SOE | Campus Drives</title>
+		<title>DBCE| Campus Drives</title>
 		<meta name="viewport"
 		content="width=device-width, initial-scale=1">
 		<meta http-equiv="Content-Type" content="text/php; charset=utf-8" />
@@ -65,16 +65,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li class="hvr-sweep-to-bottom">
 								<a href="index.php">Home<i>Get the Overview of the Site</i></a>
 								</li>
-								<li class="hvr-sweep-to-bottom">
+								<!-- <li class="hvr-sweep-to-bottom">
 									<a href="about.php">About<i>About Us and our Cheif Architects</i></a>
-								</li>
+								</li> -->
 								<li class="hvr-sweep-to-bottom active">
 									<a href="products.php">Campus Drives<i>Campus Drives</i></a>
 								</li>
 								
-								<li class="hvr-sweep-to-bottom">
+								<!-- <li class="hvr-sweep-to-bottom">
 									<a href="mail.php">Mail Us<i>Get in Touch with us Instantly</i></a>
-								</li>
+								</li> -->
 								<div class="clearfix"></div>
 						</ul>
 						<!-- script-for-menu -->
@@ -98,8 +98,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<!-- container -->
 			<div class="container">
 				<h3 class="wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">On Going and Upcomming Drives</h3>
-				<h5 class="wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">Cras porttitor imperdiet volutpat nulla malesuada lectus eros
-					<span>ut convallis felis consectetur ut</span>
+				<h5 class="wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 				</h5>
 				<div class="products-top-grids wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 					<div class="col-md-4 products-grid">
@@ -108,10 +107,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 						<div class="products-text">
 							<h4>Tata Consultancy Services</h4>
-							<p>Details about it...</p>
+							<!-- <p>Details about it...</p>
 							<div class="see-button">
 								<a class="btn btn-primary btn-lg see-button hvr-shutter-out-horizontal" href="1.php" role="button">See More</a>
-							</div>
+							</div> -->
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -121,10 +120,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 						<div class="products-text">
 							<h4>Infosys</h4>
-							<p>Details</p>
+							<!-- <p>Details</p>
 							<div class="see-button">
 								<a class="btn btn-primary btn-lg see-button hvr-shutter-out-horizontal" href="2.php" role="button">See More</a>
-							</div>
+							</div> -->
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -135,7 +134,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="products-text">
 							<h4>Google</h4>
 							<p></p>
-							<a class="btn btn-primary btn-lg see-button hvr-shutter-out-horizontal" href="3.php" role="button">See More</a>
+							<!-- <a class="btn btn-primary btn-lg see-button hvr-shutter-out-horizontal" href="3.php" role="button">See More</a> -->
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -149,7 +148,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="products-text">
 							<h4>Microsoft</h4>
 							<p></p>
-							<a class="btn btn-primary btn-lg see-button hvr-shutter-out-horizontal" href="4.php" role="button">See More</a>
+							<!-- <a class="btn btn-primary btn-lg see-button hvr-shutter-out-horizontal" href="4.php" role="button">See More</a> -->
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -158,9 +157,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<p>5.</p>
 						</div>
 						<div class="products-text">
-							<h4>Directi </h4>
+							<h4>Facebook</h4>
 							<p></p>
-							<a class="btn btn-primary btn-lg see-button hvr-shutter-out-horizontal" href="5.php" role="button">See More</a>
+							<!-- <a class="btn btn-primary btn-lg see-button hvr-shutter-out-horizontal" href="5.php" role="button">See More</a> -->
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -171,7 +170,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="products-text">
 							<h4>Intel</h4>
 							<p></p>
-							<a class="btn btn-primary btn-lg see-button hvr-shutter-out-horizontal" href="6.php" role="button">See More</a>
+							<!-- <a class="btn btn-primary btn-lg see-button hvr-shutter-out-horizontal" href="6.php" role="button">See More</a> -->
 						</div>
 						<div class="clearfix"></div>
 					</div>

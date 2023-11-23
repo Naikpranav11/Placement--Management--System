@@ -1,17 +1,23 @@
 ﻿<?php
-	include 'index1.php';
-	?>
-	<!DOCTYPE html>
+session_start();
+if(isset($_SESSION['reset']))
+{
+	
+} else
+  header("location: Forgot Password.php");
+?>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<!--favicon-->
         <link rel="shortcut icon" href="favicon.ico" type="image/icon">
         <link rel="icon" href="favicon.ico" type="image/icon">
-        
+      <!-- Footer -->
+        <link type="text/css" rel="stylesheet" href="css/style.css">
 		<meta charset="utf-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">  
-	    <title>Placement Login</title>
+	    <title>HOD-Reset Password</title>
         <meta name="description" content="">
         <meta name="author" content="templatemo">
 	    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700' rel='stylesheet' type='text/css'>
@@ -32,36 +38,34 @@
 		<div class="templatemo-content-widget templatemo-login-widget white-bg">
 			<header class="text-center">
 	          <div class="square"></div>
-	          <h1>Placement Login</h1>
+	          <h1>Reset Password</h1>
 	        </header>
-	        <form action="login1.php" class="templatemo-login-form" method="POST">
-	        	<div class="form-group">
+	        <form action="rs1.php" class="templatemo-login-form" method="POST" enctype="multipart/form-data">
+				<div class="form-group">
 	        		<div class="input-group">
-		        		<div class="input-group-addon"><i class="fa fa-user fa-fw"></i></div>	        		
-		              	<input type="text" class="form-control" placeholder="Email/Username" name="username">           
+		        		<div class="input-group-addon"><i class="fa fa-key fa-fw"></i></div>	        		
+		              	<input type="text" name="USN" class="form-control" placeholder="Username" >           
 		          	</div>	
 	        	</div>
 	        	<div class="form-group">
 	        		<div class="input-group">
 		        		<div class="input-group-addon"><i class="fa fa-key fa-fw"></i></div>	        		
-		              	<input type="password" class="form-control" placeholder="******" name="password">           
+		              	<input type="password" name="PASSWORD" class="form-control" placeholder="New Password" >           
 		          	</div>	
-	        	</div>	          	
-	          	<div class="form-group">
-				    <div class="checkbox squaredTwo">
-				        <input type="checkbox" id="c1" name="cc" />
-						<label for="c1"><span></span>Remember me</label>
-				    </div>				    
+	        	</div>
+				<div class="form-group">
+	        		<div class="input-group">
+		        		<div class="input-group-addon"><i class="fa fa-key fa-fw"></i></div>	        		
+		              	<input type="password" name="repassword" class="form-control" placeholder="Retype Password" >           
+		          	</div>	
 				</div>
 				<div class="form-group">
-					<button type="submit" class="templatemo-blue-button width-100">Login</button>
+					<button type="submit" class="templatemo-blue-button width-100">Reset Password</button>
 				</div>
 	        </form>
 		</div>
-        <div class="templatemo-content-widget templatemo-login-widget templatemo-register-widget white-bg">
-			<p>Can't Access Account? <strong><a href="Forgot Password.php" class="blue-text">Reset Password</a></strong></p>
-		</div>
-		<!--Footer-->
+		
+			<!--footer-->
 		<div class="footer">
 			<div class="container">
 				<div class="col-md-3 ftr_navi ftr">
@@ -71,16 +75,16 @@
 							<a href="../../Homepage/index.php">Home</a>
 						</li>
 						<li>
-							<a href="../SProfile/index.php">Student Login</a>
+							<a href="../SProfile/login.php">Student Login</a>
 						</li>
 						<li>
-							<a href="../PProfile/index.php">Placement Login</a>
+							<a href="../PProfile/login.php">Placement Login</a>
 						</li>
 						<li>
-							<a href="../HODProfile/index.php">HOD Login</a>
+							<a href="../HODProfile/login.php">HOD Login</a>
 						</li>
 						<li>
-							<a href="../PriProfile/index.php">Principal Login</a>
+							<a href="../PriProfile/login.php">Administrative Login</a>
 						</li>
 					</ul>
 				</div>
@@ -104,9 +108,8 @@
 						</li>
 					</ul>
 				</div>
-
 				</div>
-				
+				<div class="clearfix"></div>
 			</div>
 	</body>
 </html>

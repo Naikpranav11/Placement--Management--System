@@ -69,8 +69,8 @@
             <li><a href="login.php" ><i class="fa fa-home fa-fw"></i>Dashboard</a></li>
             <li><a href="Placement Drives.php"><i class="fa fa-home fa-fw"></i>Placement Drives</a></li>
             <li><a href="#" class="active"><i class="fa fa-users fa-fw"></i>View Students</a></li>
-            <li><a href="queries.php"><i class="fa fa-users fa-fw"></i>Queries</a></li>
-            <li><a href="Students Eligibility.php"><i class="fa fa-sliders fa-fw"></i>Students Eligibility Status</a></li>
+            <!-- <li><a href="queries.php"><i class="fa fa-users fa-fw"></i>Queries</a></li> -->
+            <li><a href="Students Eligibility.php"><i class="fa fa-sliders fa-fw"></i>Add Users</a></li>
             <li><a href="logout.php"><i class="fa fa-eject fa-fw"></i>Sign Out</a></li>
           </ul>
         </nav>
@@ -81,9 +81,9 @@
           <div class="row">
             <nav class="templatemo-top-nav col-lg-12 col-md-12">
               <ul class="text-uppercase">
-               <li><a href="../../Homepage/index.php">Home CUSAT-SOE</a></li>
-                <li><a href="../../Drives/index.php">Drives Home</a></li>
-                <li><a href="Notif.php">Notification</a></li>
+               <li><a href="../../Homepage/index.php">Home </a></li>
+                <li><a href="dhome2.php">Drives Home</a></li>
+                <!-- <li><a href="Notif.php">Notification</a></li> -->
                 <li><a href="Change Password.php">Change Password</a></li>
               </ul>
             </nav>
@@ -93,40 +93,40 @@
         <div class="templatemo-content-container">
 
           <div class="templatemo-content-widget no-padding">
-		  	<a href="bgo.php" class="templatemo-blue-button">View Branchwise</a>
+		  	<!-- <a href="bgo.php" class="templatemo-blue-button">View Branchwise</a> -->
             <div class="panel panel-default table-responsive">
 
 
-			  <table class="table table-striped table-bordered templatemo-user-table">
+            <table class="table table-striped table-bordered templatemo-user-table">
                 <thead>
                   <tr>
-				  <td><a   class="white-text templatemo-sort-by">Approval Date</a></td>
-                    <td><a   class="white-text templatemo-sort-by">First Name</a></td>
-                    <td><a   class="white-text templatemo-sort-by">Last Name </a></td>
-                    <td><a  class="white-text templatemo-sort-by">USN </a></td>
-                    <td><a class="white-text templatemo-sort-by">Mobile  </a></td>
-					   <td><a  class="white-text templatemo-sort-by">Email </a></td>
-                       <td><a class="white-text templatemo-sort-by">DOB  </a></td>
-   <td><a   class="white-text templatemo-sort-by">Sem </a></td>
-   <td><a class="white-text templatemo-sort-by">Branch </a></td>
-   <td><a  class="white-text templatemo-sort-by">SSLC </td>
-   <td><a  class="white-text templatemo-sort-by">PU/Dip </a></td>
-			      <td><a  class="white-text templatemo-sort-by">BE </a></td>
-			      <td><a class="white-text templatemo-sort-by">Backlogs </span></a></td>
-				     <td><a   class="white-text templatemo-sort-by">History Of Backlogs </span></a></td>
-				     <td><a  class="white-text templatemo-sort-by">Detain Years </a></td>
 
-				  </thead>
-			   </tr>
+                    <td><a href="" class="white-text templatemo-sort-by">First Name <span class="caret"></span></a></td>
+                    <td><a href="" class="white-text templatemo-sort-by">Last Name <span class="caret"></span></a></td>
+                    <td><a href="" class="white-text templatemo-sort-by">PRN <span class="caret"></span></a></td>
+                    <!-- <td><a href="" class="white-text templatemo-sort-by">Mobile<span class="caret"></span></a></td> -->
+                    <td><a href="" class="white-text templatemo-sort-by">Email <span class="caret"></span></a></td>
+                     <!-- <td><a href="" class="white-text templatemo-sort-by">DOB<span class="caret"></span></a></td> -->
+					  <!-- <td><a href="" class="white-text templatemo-sort-by">Sem<span class="caret"></span></a></td> -->
+					   <td><a href="" class="white-text templatemo-sort-by">Branch<span class="caret"></span></a></td>
+					    <td><a href="" class="white-text templatemo-sort-by">CGPA<span class="caret"></span></a></td>
+						 <!-- <td><a href="" class="white-text templatemo-sort-by">PU/Dip <span class="caret"></span></a></td>
+						  <td><a href="" class="white-text templatemo-sort-by">BE<span class="caret"></span></a></td>
+						   <td><a href="" class="white-text templatemo-sort-by">Current Backlogs <span class="caret"></span></a></td>
+						    <td><a href="" class="white-text templatemo-sort-by">History of Backlogs <span class="caret"></span></a></td>
+							 <td><a href="" class="white-text templatemo-sort-by">Detain years <span class="caret"></span></a></td> -->
 
-			   <?php
+                  </tr>
+                </thead>
+
+ <?php
 
 $num_rec_per_page=15;
 $connect = mysqli_connect('localhost','root','','details');
 // mysql_select_db('details');
 if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };
 $start_from = ($page-1) * $num_rec_per_page;
-$sql = "SELECT * FROM basicdetails where Approve='1' ORDER BY ApprovalDate DESC LIMIT $start_from, $num_rec_per_page";
+$sql = "SELECT * FROM students";
 $rs_result = $connect->query ($sql); //run the query
 ?>
 <?php
@@ -134,21 +134,14 @@ while ($row = $rs_result->fetch_assoc())
 {
 
             print "<tr>";
-print "<td>" . $row['ApprovalDate'] . "</td>";
-print "<td>" . $row['FirstName'] . "</td>";
-print "<td>" . $row['LastName'] . "</td>";
-print "<td>" . $row['USN'] . "</td>";
-print "<td>" . $row['Mobile'] . "</td>";
-print "<td>" . $row['Email'] . "</td>";
-print "<td>" . $row['DOB'] . "</td>";
-print "<td>" . $row['Sem'] . "</td>";
-print "<td>" . $row['Branch'] . "</td>";
-print "<td>" . $row['SSLC'] . "</td>";
-print "<td>" . $row['PU/Dip'] . "</td>";
-print "<td>" . $row['BE'] . "</td>";
-print "<td>" . $row['Backlogs'] . "</td>";
-print "<td>" . $row['HofBacklogs'] . "</td>";
-print "<td>" . $row['DetainYears'] . "</td>";
+
+print "<td>" . $row['first_name'] . "</td>";
+print "<td>" . $row['last_name'] . "</td>";
+print "<td>" . $row['prn'] . "</td>";
+print "<td>" . $row['email'] . "</td>";
+print "<td>" . $row['branch'] . "</td>";
+print "<td>" . $row['cgpa'] . "</td>";
+
 
 
 
@@ -212,8 +205,7 @@ $prev = $currentpage-1;
 </ul>
 </div>
         <footer class="text-right">
-            <p>Copyright &copy; 2018 CUSAT-SOE
-            | Developed by <a href="http://znumerique.azurewebsites.net" target="_parent">HyperMine</a></p>
+
           </footer>
         </div>
       </div>

@@ -60,7 +60,7 @@
         <nav class="templatemo-left-nav">
           <ul>
           <li><a href="login.php" class="active"><i class="fa fa-home fa-fw" class="active"></i>Dashboard</a></li>
-            <li><a href="Students Eligibility.php"><i class="fa fa-bar-chart fa-fw"></i>Check Students Eligibility</a></li>
+          <li><a href="Students Eligibility.php" class="active"><i class="fa fa-bar-chart fa-fw"></i> Add users</a></li>
             <li><a href="queries.php"><i class="fa fa-database fa-fw"></i>Queries</a></li>
             <li><a href="manage-users.php" ><i class="fa fa-users fa-fw"></i>Student Details</a></li>
             <li><a href="logout.php"><i class="fa fa-eject fa-fw"></i>Sign Out</a></li>
@@ -79,9 +79,9 @@
                 <li>
                   <a href="../../Drives/index.php">Drives Homepage</a>
                 </li>
-                <li>
+                <!-- <li>
                   <a href="Notif.php">Notification</a>
-                </li>
+                </li> -->
                 <li>
                   <a href="Change Password.php">Change Password</a>
                   </li>

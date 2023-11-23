@@ -54,7 +54,7 @@
                             <a class="page-scroll" href="../SProfile/index.php">Student Login</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="../HODProfile/index.php">HOD Login</a>
+                            <a class="page-scroll" href="../HODProfile/index.php">HR Login</a>
                         </li>
                         <li>
                             <a class="page-scroll" href="../PProfile/index.php">Placement Login</a>
@@ -71,7 +71,7 @@
         </nav>
         <header>
             <div class="header-content">
-                <div class="header-content-inner">
+                <div class="header-content-inner" style="background-color: white; border-radius: 10px; padding: 20px; text-align: center;">
                     <h1>PLACEMENT MANAGEMENT SYSTEM</h1>
                     <hr>
                     <p>We are here to Build your Skills and Career with our Driven Passion and Reality.</br>Click Below to Get Our Current Drive

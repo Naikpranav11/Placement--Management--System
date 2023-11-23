@@ -72,7 +72,7 @@
               <a href="#"><i class="fa fa-bar-chart fa-fw"></i>Placement Drives</a>
             </li>
             <li>
-              <a href="#" ><i class="fa fa-sliders fa-fw"></i>Preferences</a>
+              <a href="preferences.php" ><i class="fa fa-sliders fa-fw"></i>Preferences</a>
             </li>
             <li>
               <a href="logout.php"><i class="fa fa-eject fa-fw"></i>Sign Out</a>

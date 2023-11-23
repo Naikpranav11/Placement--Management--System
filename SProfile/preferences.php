@@ -6,6 +6,57 @@
    else {
 	   header("location: index.php");
    die("You must be Log in to view this page <a href='index.php'>Click here</a>");}
+  
+
+   //Connect to the database
+   $servername = "localhost";
+   $username = "root";
+   $password = "";
+   $dbname = "details";
+   
+   $conn = new mysqli($servername, $username, $password, $dbname);
+
+// Handle form submission
+if (isset($_POST['apply'])) {
+  $driveCname = $_POST['drive_cname'];
+  $studentPrn = $_SESSION['username'];
+
+  // Check if the student has already applied for this drive
+  $checkQuery = "SELECT * FROM applications WHERE pdrive_cname = '$driveCname' AND student_prn = '$studentPrn'";
+  $checkResult = $conn->query($checkQuery);
+
+  if ($checkResult->num_rows == 0) {
+      // Insert the application into the database
+      $applyQuery = "INSERT INTO applications (student_prn, pdrive_cname) VALUES ('$studentPrn', '$driveCname')";
+      if ($conn->query($applyQuery) === TRUE) {
+          echo "Application submitted successfully!";
+
+          // Fetch details of the selected drive
+          // $driveDetailsQuery = "SELECT * FROM pdrive WHERE cname = '$driveCname'";
+          // $driveDetailsResult = $conn->query($driveDetailsQuery);
+
+          // // Display drive details
+          // if ($driveDetailsResult->num_rows > 0) {
+          //     $driveDetails = $driveDetailsResult->fetch_assoc();
+          //     echo "<h3>Details of the Selected Drive:</h3>";
+          //     echo "Company Name: " . $driveDetails['cname'] . "<br>";
+          //     echo "Date: " . $driveDetails['date'] . "<br>";
+          //     echo "CTC: " . $driveDetails['ctc'] . "<br>";
+          //     // Add other drive details here
+          // } else {
+          //     echo "Drive details not found.";
+          // }
+      } else {
+          echo "Error: " . $applyQuery . "<br>" . $conn->error;
+      }
+  } else {
+      echo "You have already applied for this drive.";
+  }
+}
+
+// Fetch available drives from the database
+$drivesQuery = "SELECT * FROM pdrive";
+$drivesResult = $conn->query($drivesQuery);
 
 ?>
 <!DOCTYPE html>
@@ -69,7 +120,7 @@
               <a href="login.php"><i class="fa fa-home fa-fw"></i>Dashboard</a>
             </li>
             <li>
-              <a href="#"><i class="fa fa-bar-chart fa-fw"></i>Placement Drives</a>
+              <a href="dhome.php"><i class="fa fa-bar-chart fa-fw"></i>Placement Drives</a>
             </li>
             <li>
               <a href="#" class="active"><i class="fa fa-sliders fa-fw"></i>Preferences</a>
@@ -104,128 +155,28 @@
         </div>
         <div class="templatemo-content-container">
           <div class="templatemo-content-widget white-bg">
-            <h2 class="margin-bottom-10">Preferences</h2>
-            <p>Update Your Details</p>
-            <form action="pref.php" class="templatemo-login-form" method="post" enctype="multipart/form-data">
+            <h2 class="margin-bottom-10">Apply for the drive</h2>
+            <p></p>
+            <form action="" class="templatemo-login-form" method="post" enctype="multipart/form-data">
               <div class="row form-group">
-                <div class="col-lg-6 col-md-6 form-group">
-                  <label for="inputFirstName">First Name</label>
-                  <input type="text" name="Fname" class="form-control" id="inputFirstName" placeholder="Ram">
-                </div>
-                <div class="col-lg-6 col-md-6 form-group">
-                  <label for="inputLastName">Last Name</label>
-                  <input type="text"  name="Lname" class="form-control" id="inputLastName" placeholder="Laxman">
-                </div>
-
 				<div class="col-lg-6 col-md-6 form-group">
-                  <label for="usn">USN</label>
-                  <input type="text" name="USN" class="form-control" id="usn" placeholder="1CG12IS000" >
-                </div>
-
-				<div class="col-lg-6 col-md-6 form-group">
-                  <label for="Phone">Phone:</label>
-                  <input type="text" name="Num" class="form-control" id="Phone" placeholder="91xxxxxxxx">
-                </div>
-
-				 <div class="col-lg-6 col-md-6 form-group">
-                  <label for="Email">Email</label>
-                  <input type="Email" name="Email" class="form-control" id="Email" placeholder="abc@example.com">
-                </div>
-
-                <div class="col-lg-6 col-md-6 form-group">
-                  <label for="DOB">Date of Birth</label>
-                  <input type="date" name="DOB" class="form-control" id="DOB" placeholder="DD/MM/YYYY">
-                </div>
-				<div class="col-lg-6 col-md-6 form-group">
-                  <label class="control-label templatemo-block">Current Semester</label>
-                  <select name="Cursem" class="form-control">
-                    <option value="select">Semester</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                  </select>
+        <label for="drive_cname">Select Drive:</label>
+        <select name="drive_cname" required>
+        <option value="" disabled selected>Select Drive</option>
+            <?php
+            while ($row = $drivesResult->fetch_assoc()) {
+                echo "<option value='" . $row['cname'] . "'>" . $row['cname'] . " - " . $row['date'] . "</option>";
+            }
+            ?>
+        </select>
+        <br>
+        <!-- <input type="submit" name="apply" value="Apply"> -->
 				  </div>
-
-
-				  <div class="col-lg-6 col-md-6 form-group">
-                  <label class="control-label templatemo-block">Branch of Study</label>
-                  <select name="Branch" class="form-control">
-                    <option value="select">Branch</option>
-                    <option value="BScience">Basic Science</option>
-                    <option value="IT">IT</option>
-                    <option value="CSE">CSE</option>
-                    <option value="EEE">EEE</option>
-                    <option value="ECE">ECE</option>
-                    <option value="ME">ME</option>
-                    <option value="CVE">CVE</option>
-                  </select>
-                </div>
-				<div class="col-lg-6 col-md-6 form-group">
-                  <label for="sslc">SSLC/10th Aggregate</label>
-                  <input type="text" name="Percentage" class="form-control" id="sslc" placeholder="">
-                </div>
-				<div class="col-lg-6 col-md-6 form-group">
-                  <label for="Pu">12th/Diploma Aggregate</label>
-                  <input type="text" name="Puagg" class="form-control" id="Pu" placeholder="">
-                </div>
-				<div class="col-lg-6 col-md-6 form-group">
-                  <label for="BE">BE Aggregate</label>
-                  <input type="text" name="Beagg" class="form-control" id="BE" placeholder="">
-                </div>
-                <div class="col-lg-6 col-md-6 form-group">
-                  <label class="control-label templatemo-block">Current Backlogs</label>
-                  <select name="Backlogs" class="form-control">
-                    <option value="select">Numbers</option>
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                  </select>
-                </div>
-				<div class="col-lg-6 col-md-6 form-group">
-                  <label class="control-label templatemo-block">History of Backlogs</label>
-                  <select name="History" class="form-control">
-                    <option value="Y/N">Y/N</option>
-                    <option value="Y">Y</option>
-                    <option value="N">N</option>
-                  </select>
-                </div>
-                <div class="col-lg-6 col-md-6 form-group">
-                  <label class="control-label templatemo-block">Detained Years</label>
-                  <select name="Dety" class="form-control">
-                    <option value="select">Years</option>
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                  </select>
-                </div>
-
               </div>
-              </div>
-              <div class="row form-group">
-                <div class="col-lg-12">
-                  <label class="control-label templatemo-block">Upload your Profile Pic</label>
-                  <!-- <input type="file" name="fileToUpload" id="fileToUpload" class="margin-bottom-10"> -->
-                  <input type="file" name="fileToUpload" id="fileToUpload" class="filestyle" data-buttonName="btn-primary" data-buttonBefore="true"
-                  data-icon="false">
-                  <p>Maximum upload size is 5 MB.</p>
-                </div>
               </div>
               <div class="form-group text-right">
 
-				<button type="submit"  name="submit" class="templatemo-blue-button">add</button>
+				<button type="submit"  name="apply" class="templatemo-blue-button">Apply</button>
 				<button type="submit"  name="update" class="templatemo-blue-button">update</button>
                 <button type="reset" class="templatemo-white-button">Reset</button>
               </div>

@@ -48,7 +48,7 @@
 		  ?>
         </header>
         <div class="profile-photo-container">
-          <img src="../images/profile-photo.jpg" alt="Profile Photo" class="img-responsive">  
+          <!-- <img src="../images/profile-photo.jpg" alt="Profile Photo" class="img-responsive">   -->
           <div class="profile-photo-overlay"></div>
         </div>      
         <!-- Search box -->
@@ -66,8 +66,8 @@
            <li><a href="../login.php"><i class="fa fa-home fa-fw"></i>Dashboard</a></li> 
             <li><a href="../Placement Drives.php" class="active"><i class="fa fa-home fa-fw"></i>Placement Drives</a></li>           
             <li><a href="../manage-users.php"><i class="fa fa-users fa-fw"></i>View Students</a></li>
-            <li><a href="../queries.php"><i class="fa fa-users fa-fw"></i>Queries</a></li>
-            <li><a href="../Students Eligibility.php"><i class="fa fa-sliders fa-fw"></i>Students Eligibility Status</a></li>
+            <!-- <li><a href="../queries.php"><i class="fa fa-users fa-fw"></i>Queries</a></li> -->
+            <li><a href="../Students Eligibility.php"><i class="fa fa-sliders fa-fw"></i>Add Users</a></li>
             <li><a href="../logout.php"><i class="fa fa-eject fa-fw"></i>Sign Out</a></li>
           </ul>  
         </nav>
@@ -78,9 +78,9 @@
           <div class="row">
             <nav class="templatemo-top-nav col-lg-12 col-md-12">
               <ul class="text-uppercase">
-                <li><a href="../../../Homepage/index.php">Home CIT-PMS</a></li>
-                <li><a href="../../../Drives/index.php">Drives Home</a></li>
-                <li><a href="../Notif.php">Notifications</a></li>
+                <li><a href="../../../Homepage/index.php">Home</a></li>
+                <li><a href="../dhome2.php">Drives Home</a></li>
+                <!-- <li><a href="../Notif.php">Notifications</a></li> -->
                 <li><a href="Change Password.php">Change Password</a></li>
               </ul>  
             </nav> 
@@ -94,65 +94,60 @@
                   <tr>
               
                     <td><a class="white-text templatemo-sort-by">Company Name </a></td>
-                    <td><a  class="white-text templatemo-sort-by">Date </a></td>
-                    <td><a  class="white-text templatemo-sort-by">C/P</a></td>
-                    <td><a  class="white-text templatemo-sort-by">PVenue</a></td>
-					   <td><a  class="white-text templatemo-sort-by">SSLC</a></td>
-                       <td><a  class="white-text templatemo-sort-by">PU/Dip </a></td>
-   <td><a  class="white-text templatemo-sort-by">BE</a></td>               
-   <td><a  class="white-text templatemo-sort-by">Backlogs</a></td>
-   <td><a  class="white-text templatemo-sort-by">History of Backlogs </a></td>
- 
-			      <td><a  class="white-text templatemo-sort-by">Deatin years</a></td>
-			     
-				   <td><a  class="white-text templatemo-sort-by">USN </a></td>
-				  <td><a  class="white-text templatemo-sort-by">Name</a></td>
-				    
-						    <td><a  class="white-text templatemo-sort-by">Placed</a></td>
+                    <td><a  class="white-text templatemo-sort-by">Test Date </a></td>
+                    <td><a  class="white-text templatemo-sort-by">Interview Date</a></td>
+                    <td><a  class="white-text templatemo-sort-by">CTC</a></td>
+					   <td><a  class="white-text templatemo-sort-by">Required CGPA</a></td>
+				  <td><a  class="white-text templatemo-sort-by">Student Name</a></td>
+          <td><a  class="white-text templatemo-sort-by">PRN</a></td>
+          						    <td><a  class="white-text templatemo-sort-by">Placement Status</a></td>
 				     
 				    
 				  </thead>
 			   </tr>
 			   
-			   <?php
-			
-$num_rec_per_page=15;
-mysql_connect('localhost','root','');
-mysql_select_db('details');
-if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; }; 
-$start_from = ($page-1) * $num_rec_per_page; 
-$sql = "SELECT a.* , u.*
-From addpdrive a,updatedrive u
+         <?php
+$num_rec_per_page = 15;
+$conn = mysqli_connect('localhost', 'root', '', 'details');
 
-WHERE a.CompanyName = u.CompanyName AND a.Date = u.Date
- LIMIT $start_from, $num_rec_per_page"; 
-$rs_result = mysql_query ($sql); //run the query
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 
-while ($row = mysql_fetch_array($rs_result)) 
-{ 
-?>
-            <tr> 
+if (isset($_GET["page"])) {
+    $page = $_GET["page"];
+} else {
+    $page = 1;
+}
 
-<td><p><?php echo $row['CompanyName']; ?></p> </td>
-<td><p><?php echo $row['Date']; ?> </p> </td> 
-<td><p><?php echo $row['C/P']; ?></p> </td>
-<td><p><?php echo $row['PVenue']; ?> </p> </td>
-<td><p><?php echo $row['SSLC'] ; ?></p>  </td> 
-<td><p><?php echo $row['PU/Dip']; ?> </p> </td>
-<td><p><?php echo $row['BE']; ?></p> </td>
-<td><p><?php echo $row['Backlogs']; ?></p>  </td>
-<td><p><?php echo $row['HofBacklogs']; ?></p> </td>
-<td><p><?php echo $row['DetainYears']; ?></p> </td>
+$start_from = ($page - 1) * $num_rec_per_page;
 
-<td><p><?php echo $row['USN']; ?> </p> </td> 
-<td><p><?php echo $row['Name'];  ?> </p> </td> 
+$sql = "SELECT p.cname, p.date, p.interview, p.ctc, p.required_cgpa, s.first_name, s.prn, s.placement_status
+        FROM pdrive p
+        JOIN applications a ON p.cname = a.pdrive_cname
+        JOIN students s ON a.student_prn = s.prn
+        LIMIT $start_from, $num_rec_per_page";
 
-<td><p><?php echo $row['Placed']; ?></p>  </td>
+$rs_result = mysqli_query($conn, $sql);
 
-</tr> 
+while ($row = mysqli_fetch_assoc($rs_result)) {
+    ?>
+    <tr>
+        <td><p><?php echo $row['cname']; ?></p></td>
+        <td><p><?php echo $row['date']; ?> </p></td>
+        <td><p><?php echo $row['interview']; ?></p></td>
+        <td><p><?php echo $row['ctc']; ?> </p></td>
+        <td><p><?php echo $row['required_cgpa']; ?></p></td>
+        <td><p><?php echo $row['first_name']; ?></p></td>
+        <td><p><?php echo $row['prn']; ?> </p></td>
+        <td><p><?php echo $row['placement_status']; ?></p></td>
+    </tr>
 <?php
 }
+
+mysqli_close($conn);
 ?>
+
 
                 </tbody>
               </table>  
@@ -163,52 +158,52 @@ while ($row = mysql_fetch_array($rs_result))
 
   <div class="pagination-wrap">
    <ul class="pagination">
-			  <?php 
+			  <!-- <?php 
 		
-$num_rec_per_page=15;
-mysql_connect('localhost','root','');
-mysql_select_db('details');
-$sql ="SELECT a.* , u.*
-From addpdrive a,updatedrive u
+// $num_rec_per_page=15;
+// mysql_connect('localhost','root','');
+// mysql_select_db('details');
+// $sql ="SELECT a.* , u.*
+// From addpdrive a,updatedrive u
 
-WHERE a.CompanyName = u.CompanyName";
+// WHERE a.CompanyName = u.CompanyName";
 
-$rs_result = mysql_query($sql); //run the query
-$total_records = mysql_num_rows($rs_result);  //count number of records
-$totalpage = ceil($total_records / $num_rec_per_page); 
+// $rs_result = mysql_query($sql); //run the query
+// $total_records = mysql_num_rows($rs_result);  //count number of records
+// $totalpage = ceil($total_records / $num_rec_per_page); 
 
-$currentpage = (isset($_GET['page']) ? $_GET['page'] : 1);
-	 if($currentpage == 0)
-	{
+// $currentpage = (isset($_GET['page']) ? $_GET['page'] : 1);
+// 	 if($currentpage == 0)
+// 	{
 	   
-	}
-	else if( $currentpage >= 1  &&  $currentpage <= $totalpage  )
-	{
+// 	}
+// 	else if( $currentpage >= 1  &&  $currentpage <= $totalpage  )
+// 	{
 	
-		if( $currentpage > 1 && $currentpage <= $totalpage)
-			{
+// 		if( $currentpage > 1 && $currentpage <= $totalpage)
+// 			{
 				
-				$prev = $currentpage-1;
-				echo "<li><a  href='drivehome.php?page=".$prev."'><</a></li>";
+// 				$prev = $currentpage-1;
+// 				echo "<li><a  href='drivehome.php?page=".$prev."'><</a></li>";
 				
-			}
+// 			}
 	
-	if($totalpage > 1){
-$prev = $currentpage-1;
-	for ($i=$prev+1; $i<=$currentpage+2; $i++){
-		echo "<li><a href='drivehome.php?page=".$i."'>".$i."</a></li>";
-  }
-  }
-	if($totalpage > $currentpage  )
-	{
-		$nxt = $currentpage+1;
-		echo "<li><a  href='drivehome.php?page=".$nxt."' >></a></li>";
-	}
+// 	if($totalpage > 1){
+// $prev = $currentpage-1;
+// 	for ($i=$prev+1; $i<=$currentpage+2; $i++){
+// 		echo "<li><a href='drivehome.php?page=".$i."'>".$i."</a></li>";
+//   }
+//   }
+// 	if($totalpage > $currentpage  )
+// 	{
+// 		$nxt = $currentpage+1;
+// 		echo "<li><a  href='drivehome.php?page=".$nxt."' >></a></li>";
+// 	}
 
-	 echo "<li><a>Total Pages:".$totalpage."</a></li>";
-}
+// 	 echo "<li><a>Total Pages:".$totalpage."</a></li>";
+// }
 
- ?> 
+ ?>  -->
 </ul>
 </div>
 
@@ -216,9 +211,7 @@ $prev = $currentpage-1;
             
        
           <footer class="text-right">
-           		<p>Copyright &copy; 2015 CIT-PMS | Developed by
-              <a href="http://znumerique.azurewebsites.net" target="_parent">ZNumerique Technologies</a>
-			  </p>
+
           </footer>         
         </div>
       </div>

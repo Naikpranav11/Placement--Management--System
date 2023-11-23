@@ -48,7 +48,7 @@
 		  ?>
         </header>
         <div class="profile-photo-container">
-          <img src="images/profile-photo.jpg" alt="Profile Photo" class="img-responsive">
+          <!-- <img src="images/profile-photo.jpg" alt="Profile Photo" class="img-responsive"> -->
           <div class="profile-photo-overlay"></div>
         </div>
         <!-- Search box -->
@@ -78,9 +78,9 @@
           <div class="row">
             <nav class="templatemo-top-nav col-lg-12 col-md-12">
               <ul class="text-uppercase">
-               <li><a href="../../Homepage/index.php">Home CIT-PMS</a></li>
-                <li><a href="../../Drives/index.php">Drives Home</a></li>
-                <li><a href="Notif.php">Notifications</a></li>
+               <li><a href="../../Homepage/index.php">Home </a></li>
+                <li><a href="dhome2.php">Drives Home</a></li>
+                <!-- <li><a href="Notif.php">Notifications</a></li> -->
                 <li><a href="Change Password.php" class="active">Change Password</a></li>
               </ul> 
             </nav>
@@ -97,34 +97,34 @@
                   <input type="text" name="compny" class="form-control" id="inputFirstName" placeholder="company">
                 </div>
                 <div class="col-lg-6 col-md-6 form-group">
-                  <label for="DOB">Date</label>
+                  <label for="DOB">Test Date</label>
                   <input type="date" name="date" class="form-control" id="DOB" placeholder="DD/MM/YYYY">
                 </div>
-				<div class="col-lg-6 col-md-6 form-group">
+				<!-- <div class="col-lg-6 col-md-6 form-group">
                   <label class="control-label templatemo-block">Campus/Pool</label>
                   <select name="campool" class="form-control">
                     <option value="Y/N">Campus/Pool</option>
                     <option value="Y">Campus</option>
                     <option value="N">Pool</option>
                   </select>
-                </div>
+                </div> -->
                 <div class="col-lg-6 col-md-6 form-group">
-                  <label for="inputFirstName">Pool Campus Venue</label>
-                  <input type="text" name="pcv" class="form-control" id="inputFirstName" placeholder="College name">
+                  <label for="ctc">CTC</label>
+                  <input type="text" name="pcv" class="form-control" id="ctc" placeholder="ctc">
                 </div>
 				<div class="col-lg-6 col-md-6 form-group">
-                  <label for="sslc">SSLC/10th Aggregate</label>
-                  <input type="text" name="sslc" class="form-control" id="sslc" placeholder="">
+                  <label for="interview">Interview Date</label>
+                  <input type="text" name="interview" class="form-control" id="interview" placeholder="">
                 </div>
 				<div class="col-lg-6 col-md-6 form-group">
-                  <label for="Pu">12th/Diploma Aggregate</label>
-                  <input type="text" name="puagg" class="form-control" id="Pu" placeholder="">
+                  <label for="required_cgpa">Required CGPA</label>
+                  <input type="text" name="required_cgpa" class="form-control" id="required_cgpa" placeholder="">
                 </div>
-				<div class="col-lg-6 col-md-6 form-group">
+				<!-- <div class="col-lg-6 col-md-6 form-group">
                   <label for="BE">BE Aggregate</label>
                   <input type="text" name="beagg" class="form-control" id="BE" placeholder="">
-                </div>
-                <div class="col-lg-6 col-md-6 form-group">
+                </div> -->
+                <!-- <div class="col-lg-6 col-md-6 form-group">
                   <label class="control-label templatemo-block">Current Backlogs</label>
                   <select name="curback" class="form-control">
                     <option value="select">Numbers</option>
@@ -138,16 +138,16 @@
                     <option value="7">7</option>
                     <option value="8">8</option>
                   </select>
-                </div>
-				<div class="col-lg-6 col-md-6 form-group">
+                </div> -->
+				<!-- <div class="col-lg-6 col-md-6 form-group">
                   <label class="control-label templatemo-block">History of Backlogs</label>
                   <select name="hob" class="form-control">
                     <option value="Y/N">Y/N</option>
                     <option value="Y">Y</option>
                     <option value="N">N</option>
                   </select>
-                </div>
-                <div class="col-lg-6 col-md-6 form-group">
+                </div> -->
+                <!-- <div class="col-lg-6 col-md-6 form-group">
                   <label class="control-label templatemo-block">Break of Studies</label>
                   <select name="break" class="form-control">
                     <option value="select">Years</option>
@@ -157,11 +157,11 @@
                     <option value="3">3</option>
                     <option value="4">4</option>
                   </select>
-                </div>
-				<div class="col-lg-26 col-md-26 form-group">
+                </div> -->
+				<!-- <div class="col-lg-26 col-md-26 form-group">
                   <label for="inputFirstName">Other Details</label>
                   <textarea rows="3" name="odetails" class="form-control" id="inputFirstName" placeholder="Details"></textarea>
-				  </div>
+				  </div> -->
           <br>
               <div class="form-group text-right">
                 <button type="submit" name="submit" class="templatemo-blue-button">submit</button>
@@ -170,9 +170,7 @@
             </form>
           </div>
           <footer class="text-right">
-            <p>Copyright &copy; 2015 CIT-PMS | Developed by
-              <a href="http://www.wafferdevelopers.com" target="_parent">Waffer Developers</a>
-            </p>
+
           </footer>
         </div>
       </div>

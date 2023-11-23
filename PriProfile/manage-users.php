@@ -60,7 +60,7 @@
         <nav class="templatemo-left-nav">
           <ul>
          <li><a href="index.php" ><i class="fa fa-home fa-fw"></i>Dashboard</a></li>
-            <li><a href="Students Eligibility.php"><i class="fa fa-bar-chart fa-fw"></i>Check Students Eligibility</a></li>
+         <li><a href="Students Eligibility.php" class="active"><i class="fa fa-bar-chart fa-fw"></i> Add users</a></li>
             <li><a href="queries.php"><i class="fa fa-database fa-fw"></i>Queries</a></li>
             <li><a href="manage-users.php" class="active" ><i class="fa fa-users fa-fw"></i>Student Details</a></li>
 
@@ -80,9 +80,9 @@
                 <li>
                   <a href="../../Drives/index.php">Drives Homepage</a>
                 </li>
-                <li>
+                <!-- <li>
                    <a href="Notif.php">Notification</a>
-                </li>
+                </li> -->
                 <li>
                   <a href="Change Password.php">Change Password</a>
                   </li>
@@ -99,18 +99,18 @@
 
                     <td><a href="" class="white-text templatemo-sort-by">First Name <span class="caret"></span></a></td>
                     <td><a href="" class="white-text templatemo-sort-by">Last Name <span class="caret"></span></a></td>
-                    <td><a href="" class="white-text templatemo-sort-by">USN <span class="caret"></span></a></td>
-                    <td><a href="" class="white-text templatemo-sort-by">Mobile<span class="caret"></span></a></td>
+                    <td><a href="" class="white-text templatemo-sort-by">PRN <span class="caret"></span></a></td>
+                    <!-- <td><a href="" class="white-text templatemo-sort-by">Mobile<span class="caret"></span></a></td> -->
                     <td><a href="" class="white-text templatemo-sort-by">Email <span class="caret"></span></a></td>
-                     <td><a href="" class="white-text templatemo-sort-by">DOB<span class="caret"></span></a></td>
-					  <td><a href="" class="white-text templatemo-sort-by">Sem<span class="caret"></span></a></td>
+                     <!-- <td><a href="" class="white-text templatemo-sort-by">DOB<span class="caret"></span></a></td> -->
+					  <!-- <td><a href="" class="white-text templatemo-sort-by">Sem<span class="caret"></span></a></td> -->
 					   <td><a href="" class="white-text templatemo-sort-by">Branch<span class="caret"></span></a></td>
-					    <td><a href="" class="white-text templatemo-sort-by">SSLC<span class="caret"></span></a></td>
-						 <td><a href="" class="white-text templatemo-sort-by">PU/Dip <span class="caret"></span></a></td>
+					    <td><a href="" class="white-text templatemo-sort-by">CGPA<span class="caret"></span></a></td>
+						 <!-- <td><a href="" class="white-text templatemo-sort-by">PU/Dip <span class="caret"></span></a></td>
 						  <td><a href="" class="white-text templatemo-sort-by">BE<span class="caret"></span></a></td>
 						   <td><a href="" class="white-text templatemo-sort-by">Current Backlogs <span class="caret"></span></a></td>
 						    <td><a href="" class="white-text templatemo-sort-by">History of Backlogs <span class="caret"></span></a></td>
-							 <td><a href="" class="white-text templatemo-sort-by">Detain years <span class="caret"></span></a></td>
+							 <td><a href="" class="white-text templatemo-sort-by">Detain years <span class="caret"></span></a></td> -->
 
                   </tr>
                 </thead>
@@ -122,7 +122,7 @@ $connect = mysqli_connect('localhost','root','','details');
 // mysql_select_db('details');
 if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };
 $start_from = ($page-1) * $num_rec_per_page;
-$sql = "SELECT * FROM basicdetails where Approve='1' ORDER BY ApprovalDate DESC LIMIT $start_from, $num_rec_per_page";
+$sql = "SELECT * FROM students";
 $rs_result = $connect->query ($sql); //run the query
 ?>
 <?php
@@ -131,20 +131,13 @@ while ($row = $rs_result->fetch_assoc())
 
             print "<tr>";
 
-print "<td>" . $row['FirstName'] . "</td>";
-print "<td>" . $row['LastName'] . "</td>";
-print "<td>" . $row['USN'] . "</td>";
-print "<td>" . $row['Mobile'] . "</td>";
-print "<td>" . $row['Email'] . "</td>";
-print "<td>" . $row['DOB'] . "</td>";
-print "<td>" . $row['Sem'] . "</td>";
-print "<td>" . $row['Branch'] . "</td>";
-print "<td>" . $row['SSLC'] . "</td>";
-print "<td>" . $row['PU/Dip'] . "</td>";
-print "<td>" . $row['BE'] . "</td>";
-print "<td>" . $row['Backlogs'] . "</td>";
-print "<td>" . $row['HofBacklogs'] . "</td>";
-print "<td>" . $row['DetainYears'] . "</td>";
+print "<td>" . $row['first_name'] . "</td>";
+print "<td>" . $row['last_name'] . "</td>";
+print "<td>" . $row['prn'] . "</td>";
+print "<td>" . $row['email'] . "</td>";
+print "<td>" . $row['branch'] . "</td>";
+print "<td>" . $row['cgpa'] . "</td>";
+
 
 
 

@@ -1,10 +1,14 @@
 <?php
   session_start();
-  if(isset($_SESSION["priusername"])){
-  }
-   else
+ if (isset($_SESSION['husername'])){
+
+	   }
+   else {
 	   header("location: index.php");
+   }
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,7 +18,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Company Details</title>
+    <title>Manage Students</title>
     <meta name="description" content="">
     <meta name="author" content="templatemo">
 
@@ -39,9 +43,11 @@
           <div class="square"></div>
           <?php
 		  $Welcome = "Welcome";
-          echo "<h1>" . $Welcome . "<br>". $_SESSION['priusername']. "</h1>";
+          echo "<h1>" . $Welcome . "<br>". $_SESSION['husername']. "</h1>";
 		 echo "<br>";
-
+		 echo "<h1>(</h1>";
+		    echo "<h1>" . $_SESSION['department']. "</h1>";
+            echo "<h1>)</h1>";
 		  ?>
         </header>
         <div class="profile-photo-container">
@@ -59,11 +65,10 @@
             <i class="fa fa-bars"></i>
           </div>
         <nav class="templatemo-left-nav">
-            <ul>
-          <li><a href="index.php" ><i class="fa fa-home fa-fw"></i>Dashboard</a></li>
-            <li><a href="Students Eligibility.php" class="active"><i class="fa fa-bar-chart fa-fw"></i> Eligibility Criteria</a></li>
-            <li><a href="queries.php"><i class="fa fa-database fa-fw"></i>Queries</a></li>
-            <li><a href="manage-users.php" ><i class="fa fa-users fa-fw"></i>Student Details</a></li>
+          <ul>
+            <li><a href="login.php"><i class="fa fa-home fa-fw"></i>Dashboard</a></li>
+            <li><a href="#" class="active"><i class="fa fa-users fa-fw"></i>Manage Students</a></li>
+            <li><a href="preferences.php"><i class="fa fa-sliders fa-fw"></i>Preferences</a></li>
             <li><a href="logout.php"><i class="fa fa-eject fa-fw"></i>Sign Out</a></li>
           </ul>
         </nav>
@@ -74,75 +79,52 @@
           <div class="row">
             <nav class="templatemo-top-nav col-lg-12 col-md-12">
               <ul class="text-uppercase">
-                  <li>
-                  <a href="../../Homepage/index.php">Home CUSAT-SOE</a>
-                </li>
-                <li>
-                  <a href="../../Drives/index.php">Drives Homepage</a>
-                </li>
-                <li>
-                  <a href="Notif.php">Notification</a>
-                </li>
-                <li>
-                  <a href="Change Password.php">Change Password</a>
-                  </li>
+                <li><a href="../../Homepage/index.php">Home </a></li>
+                <li><a href="../../Drives/index.php">Drives</a></li>
+                     <li><a href="Notif.php">Notification</a></li>
+                <li><a href="Change Password.php">Change Password</a></li>
               </ul>
             </nav>
           </div>
         </div>
-<div class="templatemo-content-container">
+        <div class="templatemo-content-container">
           <div class="templatemo-content-widget no-padding">
             <div class="panel panel-default table-responsive">
               <table class="table table-striped table-bordered templatemo-user-table">
                 <thead>
                   <tr>
-					<td><a href="" class="white-text templatemo-sort-by">First Name <span class="caret"></span></a></td>
-                    <td><a href="" class="white-text templatemo-sort-by">Last Name <span class="caret"></span></a></td>
-                    <td><a href="" class="white-text templatemo-sort-by">USN<span class="caret"></span></a></td>
-                    <td><a href="" class="white-text templatemo-sort-by">Mobile<span class="caret"></span></a></td>
-					   <td><a href="" class="white-text templatemo-sort-by">Email<span class="caret"></span></a></td>
-                       <td><a href="" class="white-text templatemo-sort-by">Dob <span class="caret"></span></a></td>
-   <td><a href="" class="white-text templatemo-sort-by">current sem<span class="caret"></span></a></td>
-   <td><a href="" class="white-text templatemo-sort-by">Branch<span class="caret"></span></a></td>
-   <td><a href="" class="white-text templatemo-sort-by">SSLC percentage <span class="caret"></span></a></td>
-   <td><a href="" class="white-text templatemo-sort-by">PU percentage<span class="caret"></span></a></td>
-			      <td><a href="" class="white-text templatemo-sort-by">BE aggregate<span class="caret"></span></a></td>
-			      <td><a href="" class="white-text templatemo-sort-by">current backlogs <span class="caret"></span></a></td>
-				     <td><a href="" class="white-text templatemo-sort-by">history of backlogs <span class="caret"></span></a></td>
-				     <td><a href="" class="white-text templatemo-sort-by">Detain years<span class="caret"></span></a></td>
+
+
+
+					<td><a  class="white-text templatemo-sort-by">First Name </a></td>
+                    <td><a class="white-text templatemo-sort-by">Last Name </a></td>
+                    <td><a class="white-text templatemo-sort-by">USN</a></td>
+                    <td><a  class="white-text templatemo-sort-by">Mobile</a></td>
+					   <td><a class="white-text templatemo-sort-by">Email</a></td>
+                       <td><a  class="white-text templatemo-sort-by">Dob </a></td>
+   <td><a class="white-text templatemo-sort-by">Current Sem</a></td>
+   <td><a  class="white-text templatemo-sort-by">Branch</a></td>
+   <td><a  class="white-text templatemo-sort-by">SSLC Percentage </a></td>
+   <td><a class="white-text templatemo-sort-by">PU Percentage</a></td>
+			      <td><a  class="white-text templatemo-sort-by">BE Aggregate</a></td>
+			      <td><a  class="white-text templatemo-sort-by">Current Backlogs </a></td>
+				     <td><a  class="white-text templatemo-sort-by">History of Backlogs </a></td>
+				     <td><a  class="white-text templatemo-sort-by">Detain Years</a></td>
 				  </thead>
 			   </tr>
 
 			   <?php
-
+$p = $_SESSION['department'];
 $num_rec_per_page=15;
-$connect = mysqli_connect('localhost','root','','details');
+$conn = mysqli_connect('localhost','root','', 'details');
 // mysql_select_db('details');
 if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };
 $start_from = ($page-1) * $num_rec_per_page;
-$sql = "SELECT * FROM basicdetails where Approve='1' DESC LIMIT $start_from, $num_rec_per_page";
-$rs_result = $connect->query ($sql); //run the query
-?>
-<?php
+$sql = "SELECT * FROM basicdetails WHERE Branch='$p' LIMIT $start_from, $num_rec_per_page";
+$rs_result = $conn->query($sql); //run the query
 
-
-if(isset($_POST['submit']))
+while ($row = $rs_result->fetch_assoc())
 {
-$branch = $_POST['Branch'];
-$sslc= $_POST['sslc'];
-$puaggregate = $_POST['pugg'];
-$beaggregate= $_POST['beagg'];
-$backlogs = $_POST['curback'];
-$hisofbk = $_POST['hob'];
-$dety = $_POST['dy'];
-$sql = "SELECT * FROM basicdetails where Approve=1 and Branch='$branch' and SSLC>='$sslc' and `PU/Dip`>='$puaggregate' and BE>='$beaggregate' and Backlogs='$backlogs' and HofBacklogs='$hisofbk' and DetainYears='$dety'" ;
- //run the query
-
- $sql1 = $connect->query($sql);
-
-while ($row = $sql1->fetch_assoc())
-{
-
 
             print "<tr>";
 
@@ -161,28 +143,30 @@ print "<td>" . $row['Backlogs'] . "</td>";
 print "<td>" . $row['HofBacklogs'] . "</td>";
 print "<td>" . $row['DetainYears'] . "</td>";
 
+
 print "</tr>";
 
 }
-}
 ?>
- </tbody>
+
+                </tbody>
               </table>
 			  </div>
 			  </div>
 			  </div>
-			  <div class="pagination-wrap">
-          <ul class="pagination">
+
+
+  <div class="pagination-wrap">
+  <ul class="pagination">
 			  <?php
 
 $num_rec_per_page=15;
-$connect = mysqli_connect('localhost','root','','details');
+$conn = mysqli_connect('localhost','root','', 'details');
 // mysql_select_db('details');
-$sql = "SELECT * FROM basicdetails where Approve='1'";
-$rs_result = $connect->query($sql); //run the query
+$sql = "SELECT * FROM basicdetails where Branch='$p'";
+$rs_result = $conn->query($sql); //run the query
 $total_records = $rs_result->num_rows;  //count number of records
 $totalpage = ceil($total_records / $num_rec_per_page);
-
 $currentpage = (isset($_GET['page']) ? $_GET['page'] : 1);
 	 if($currentpage == 0)
 	{
@@ -195,14 +179,14 @@ $currentpage = (isset($_GET['page']) ? $_GET['page'] : 1);
 			{
 
 				$prev = $currentpage-1;
-				echo "<li><a  href='eligibility.php?page=".$prev."'><</a></li>";
+				echo "<li><a  href='CompanyDetails.php?page=".$prev."'><</a></li>";
 
 			}
 
 	if($totalpage > 1){
 $prev = $currentpage-1;
 	for ($i=$prev+1; $i<=$currentpage+2; $i++){
-		echo "<li><a href='eligibility.php?page=".$i."'>".$i."</a></li>";
+		echo "<li><a href='CompanyDetails.php?page=".$i."'>".$i."</a></li>";
   }
   }
 
@@ -210,16 +194,25 @@ $prev = $currentpage-1;
 	if($totalpage > $currentpage  )
 	{
 		$nxt = $currentpage+1;
-		echo "<li><a  href='eligibility.php?page=".$nxt."' >></a></li>";
+		echo "<li><a  href='CompanyDetails.php?page=".$nxt."' >></a></li>";
 	}
 
 	 echo "<li><a>Total Pages:".$totalpage."</a></li>";
 }
  ?>
-
 </ul>
 </div>
 
+
+
+
+          <div class="templatemo-flex-row flex-content-row">
+            <div class="col-1">
+
+          </div>
+          <footer class="text-right">
+
+          </footer>
         </div>
       </div>
     </div>

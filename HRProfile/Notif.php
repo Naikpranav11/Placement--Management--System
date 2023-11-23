@@ -1,12 +1,14 @@
 <?php
   session_start();
-  if(($_SESSION["pusername"])){
+ if (($_SESSION['husername'])){
 
   }
    else {
 	   header("location: index.php");
-   }
+   die("You must be Log in to view this page <a href='index.php'>Click here</a>");}
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,10 +18,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Placement - Preferences</title>
+    <title>HOD - Preferences</title>
     <meta name="description" content="">
     <meta name="author" content="templatemo">
-
     <!--
     Visual Admin Template
     http://www.templatemo.com/preview/templatemo_455_visual_admin
@@ -43,9 +44,12 @@
       <div class="templatemo-sidebar">
         <header class="templatemo-site-header">
           <div class="square"></div>
-<?php
-		  $Welcome = "Bomjour!!!";
-          echo "<h1>" . $Welcome . "<br>". $_SESSION['pusername']. "</h1>";
+          <?php
+		  $Welcome = "Welcome";
+          echo "<h1>" . $Welcome . "<br>". $_SESSION['husername']. "</h1>";
+		  echo "<h1>(</h1>";
+		    echo "<h1>" . $_SESSION['department']. "</h1>";
+            echo "<h1>)</h1>";
 		  ?>
         </header>
         <div class="profile-photo-container">
@@ -65,10 +69,8 @@
         <nav class="templatemo-left-nav">
           <ul>
             <li><a href="login.php"><i class="fa fa-home fa-fw"></i>Dashboard</a></li>
-            <li><a href="Placement Drives.php" class="active"><i class="fa fa-home fa-fw"></i>Placement Drives</a></li>
-            <li><a href="manage-users.php"><i class="fa fa-users fa-fw"></i>View Students</a></li>
-            <!-- <li><a href="queries.php"><i class="fa fa-users fa-fw"></i>Queries</a></li> -->
-            <li><a href="Students Eligibility.php"><i class="fa fa-sliders fa-fw"></i>Add Users</a></li>
+            <li><a href="manage-student.php"><i class="fa fa-users fa-fw"></i>Manage Students</a></li>
+            <li><a href="#"><i class="fa fa-sliders fa-fw"></i>Preferences</a></li>
             <li><a href="logout.php"><i class="fa fa-eject fa-fw"></i>Sign Out</a></li>
           </ul>
         </nav>
@@ -80,8 +82,8 @@
             <nav class="templatemo-top-nav col-lg-12 col-md-12">
               <ul class="text-uppercase">
                   <li><a href="../../Homepage/indes.php">Home </a></li>
-                <li><a href="dhome2.php">Drives Home</a></li>
-                <!-- <li><a href="Notif.php">Notifications</a></li> -->
+                <li><a href="../../Drives/index.php">Drives Home</a></li>
+                <li><a href="Notif.php">Notification</a></li>
                 <li><a href="Change Password.php">Change Password</a></li>
               </ul>
             </nav>
@@ -91,74 +93,32 @@
           <div class="templatemo-content-widget white-bg">
            <div class="templatemo-flex-row flex-content-row">
             <div class="col-1">
-              <div class="templatemo-content-widget orangee-bg">
-                <i class="fa fa-times"></i>
-                <div class="media">
-                  <div class="media-left">
-                    <a href="add pdrive.php">
-                      <img class="media-object img-circle" src="images/sunset11.png" alt="Sunset" width="100px" height="100px">
-                    </a>
-                  </div>
-                  <div class="media-body">
-                    <h2 class="media-heading text-uppercase">Add Placement Drives</h2>
-                    <p>Add New/Existing Company To the Current Drive List</p>
-                  </div>
-                </div>
-              </div>
-				<!-- <div class="templatemo-content-widget orangeee-bg">
-                <i class="fa fa-times"></i>
-                <div class="media">
-                  <div class="media-left">
-                   <a href="Placement Drives/update.php">
-                      <img class="media-object img-circle" src="images/UD.png" alt="Sunset" width="100px" height="100px">
-                   </a>
-                  </div>
-                  <div class="media-body">
-
-                    <h2 class="media-heading text-uppercase">Update Drive Details</h2><p>Update the Details of Drives happened and the Status of Students </p>
-                  </div>
-                </div>
-              </div> -->
-				<!-- <div class="templatemo-content-widget orangeeee-bg">
-                <i class="fa fa-times"></i>
-                <div class="media">
-                  <div class="media-left">
-                    <a href="Placement Drives/Companydetails.php">
-                      <img class="media-object img-circle" src="images/sunset33.jpg" alt="Sunset" width="100px" height="100px">
-                    </a>
-                  </div>
-                  <div class="media-body">
-                    <h2 class="media-heading text-uppercase">Company Details</h2>
-                    <p>View the Eligibility Criteria of Companies Visited to Our Campus</p>
-                  </div>
-                </div>
-              </div> -->
-				<div class="templatemo-content-widget oranggge-bg">
-                <i class="fa fa-times"></i>
-                <div class="media">
-                  <div class="media-left">
-                    <a href="Placement Drives/drivehome.php">
-                      <img class="media-object img-circle" src="images/DD.jpg" alt="Sunset" width="100px" height="100px">
-                    </a>
-                  </div>
-                  <div class="media-body">
-                    <h2 class="media-heading text-uppercase">Drive Details</h2>
-                    <p>Get the Whole Information of the Happened Drives</p>
-                  </div>
-                </div>
-              </div>
-              <div class="templatemo-content-widget orangge-bg">
+              <div class="templatemo-content-widget Bluegrey-bg">
                 <i class="fa fa-times"></i>
                 <div class="media">
                   <div class="media-left">
                     <a href="#">
-                      <img class="media-object img-circle" src="images/UI.png" alt="Sunset" width="100px" height="100px">
+                      <img class="media-object img-circle" src="images/sunset1.png" alt="Sunset" width="200px" height="200px">
                     </a>
                   </div>
-                  <!-- <div class="media-body">
-                    <h2 class="media-heading text-uppercase">Upload Image to Gallery</h2>
-                    <p>Update the Image To PMS Gallery</p>
-                  </div> -->
+                  <div class="media-body">
+                    <a href="RNotif.php"><h2 class="media-heading text-uppercase">Read Messages</h2></a>
+                    <p>Messages from Placement Department and Principal</p>
+                  </div>
+                </div>
+              </div>
+              <div class="templatemo-content-widget Bluegrey1-bg">
+                <i class="fa fa-times"></i>
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object img-circle" src="images/PN1.jpg" alt="Sunset" width="175px" height="175px">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <a href="WNotif.php"><h2 class="media-heading text-uppercase"><p></p> Post Notifications</h2></a>
+                    <p>Send Messages to Students</p>
+                  </div>
                 </div>
               </div>
             </div>

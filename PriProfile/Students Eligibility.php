@@ -4,6 +4,15 @@
   }
    else
 	   header("location: index.php");
+
+// Display success or error message if set
+if (isset($_SESSION['success_message'])) {
+  echo '<div class="alert alert-success">' . $_SESSION['success_message'] . '</div>';
+  unset($_SESSION['success_message']); // clear the session variable
+} elseif (isset($_SESSION['error_message'])) {
+  echo '<div class="alert alert-danger">' . $_SESSION['error_message'] . '</div>';
+  unset($_SESSION['error_message']); // clear the session variable
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -58,7 +67,7 @@
         <nav class="templatemo-left-nav">
           <ul>
           <li><a href="index.php" ><i class="fa fa-home fa-fw"></i>Dashboard</a></li>
-            <li><a href="Students Eligibility.php" class="active"><i class="fa fa-bar-chart fa-fw"></i> Eligibility Criteria</a></li>
+            <li><a href="Students Eligibility.php" class="active"><i class="fa fa-bar-chart fa-fw"></i> Add users</a></li>
             <li><a href="queries.php"><i class="fa fa-database fa-fw"></i>Queries</a></li>
             <li><a href="manage-users.php" ><i class="fa fa-users fa-fw"></i>Student Details</a></li>
             <li><a href="logout.php"><i class="fa fa-eject fa-fw"></i>Sign Out</a></li>
@@ -72,14 +81,14 @@
             <nav class="templatemo-top-nav col-lg-12 col-md-12">
               <ul class="text-uppercase">
                   <li>
-                  <a href="../../Homepage/index.php">Home CUSAT-SOE</a>
+                  <a href="../../Homepage/index.php">Home</a>
                 </li>
                 <li>
-                  <a href="../../Drives/index.php">Drives Homepage</a>
+                  <a href="dhome1.php">Drives Homepage</a>
                 </li>
-                <li>
+                <!-- <li>
                   <a href="Notif.php">Notification</a>
-                </li>
+                </li> -->
                 <li>
                   <a href="Change Password.php">Change Password</a>
                   </li>
@@ -89,12 +98,12 @@
         </div>
          <div class="templatemo-content-container">
           <div class="templatemo-content-widget white-bg">
-            <h2 class="margin-bottom-10">ELIGIBILITY CRITERIA</h2>
-
-            <form action="eligibility.php" class="templatemo-login-form" method="POST" enctype="multipart/form-data">
+            <h2 class="margin-bottom-10">ADD USERS</h2>
+            <div>
+            <form action="insert_tpo.php" class="templatemo-login-form" method="POST" enctype="multipart/form-data">
 
               <div class="row form-group">
-                	 <div class="col-lg-6 col-md-6 form-group">
+                	 <!-- <div class="col-lg-6 col-md-6 form-group">
                   <label class="control-label templatemo-block">Branch of Study</label>
                   <select name="Branch" class="form-control">
 					   <option value="">Branch</option>
@@ -105,24 +114,28 @@
                     <option value="ME">ME</option>
                     <option value="CVE">CVE</option>
                   </select>
+                </div> -->
+				<div class="col-lg-6 col-md-6 form-group">
+                  <label for="tpoid">ID</label>
+                  <input type="text" name="id" class="form-control" id="id" placeholder="">
                 </div>
 				<div class="col-lg-6 col-md-6 form-group">
-                  <label for="sslc">SSLC/10th Aggregate</label>
-                  <input type="text" name="sslc" class="form-control" id="sslc" placeholder="">
+                  <label for="name">Name</label>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="">
                 </div>
 				<div class="col-lg-6 col-md-6 form-group">
-                  <label for="Pu">12th/Diploma Aggregate</label>
-                  <input type="text" name="pugg" class="form-control" id="Pu" placeholder="">
-                </div>
-				<div class="col-lg-6 col-md-6 form-group">
-                  <label for="BE">BE Aggregate</label>
-                  <input type="text" name="beagg" class="form-control" id="BE" placeholder="">
+                  <label for="username">UserName</label>
+                  <input type="text" name="username" class="form-control" id="username" placeholder="">
                 </div>
                 <div class="col-lg-6 col-md-6 form-group">
-                  <label class="control-label templatemo-block">Current Backlogs</label>
-                  <input type="number" name="curback" class="form-control" placeholder="Numbers">
+                  <label class="control-label templatemo-block">Email</label>
+                  <input type="email" name="email" class="form-control" placeholder="email">
                 </div>
-				<div class="col-lg-6 col-md-6 form-group">
+                <div class="col-lg-6 col-md-6 form-group">
+                  <label for="pass">Password</label>
+                  <input type="password" name="pass" class="form-control" id="pass" placeholder="*******">
+                </div>
+				<!-- <div class="col-lg-6 col-md-6 form-group">
                   <label class="control-label templatemo-block">History of Backlogs</label>
                   <select name="hob" class="form-control">
                     <option value="Y/N">Y/N</option>
@@ -141,9 +154,9 @@
                     <option value="3">3</option>
                     <option value="4">4</option>
                   </select>
-                </div>
+                </div> -->
 
-
+              </div>
 
 
           <br>
