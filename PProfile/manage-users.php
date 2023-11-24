@@ -160,48 +160,48 @@ print "</tr>";
 
   <div class="pagination-wrap">
   <ul class="pagination">
-			  <?php
-$num_rec_per_page=15;
-$connect = mysqli_connect('localhost','root','', 'details');
-// mysql_select_db('details');
-$sql = "SELECT * FROM basicdetails where Approve='1' ";
-$rs_result = $connect->query($sql); //run the query
-$total_records = $rs_result->num_rows;  //count number of records
-$totalpage = ceil($total_records / $num_rec_per_page);
-$currentpage = (isset($_GET['page']) ? $_GET['page'] : 1);
-	 if($currentpage == 0)
-	{
+			  
+<!-- // $num_rec_per_page=15;
+// $connect = mysqli_connect('localhost','root','', 'details');
+// // mysql_select_db('details');
+// $sql = "SELECT * FROM basicdetails where Approve='1' ";
+// $rs_result = $connect->query($sql); //run the query
+// $total_records = $rs_result->num_rows;  //count number of records
+// $totalpage = ceil($total_records / $num_rec_per_page);
+// $currentpage = (isset($_GET['page']) ? $_GET['page'] : 1);
+// 	 if($currentpage == 0)
+// 	{ -->
+<!-- 
+// 	}
+// 	else if( $currentpage >= 1  &&  $currentpage <= $totalpage  )
+// 	{
 
-	}
-	else if( $currentpage >= 1  &&  $currentpage <= $totalpage  )
-	{
+// 		if( $currentpage > 1 && $currentpage <= $totalpage)
+// 			{
 
-		if( $currentpage > 1 && $currentpage <= $totalpage)
-			{
+// 				$prev = $currentpage-1;
+// 				echo "<li><a  href='manage-users.php?page=".$prev."'><</a></li>";
 
-				$prev = $currentpage-1;
-				echo "<li><a  href='manage-users.php?page=".$prev."'><</a></li>";
+// 			}
 
-			}
-
-	if($totalpage > 1){
-$prev = $currentpage-1;
-	for ($i=$prev+1; $i<=$currentpage+2; $i++){
-		echo "<li><a href='manage-users.php?page=".$i."'>".$i."</a></li>";
-  }
-  }
+// 	if($totalpage > 1){
+// $prev = $currentpage-1;
+// 	for ($i=$prev+1; $i<=$currentpage+2; $i++){
+// 		echo "<li><a href='manage-users.php?page=".$i."'>".$i."</a></li>";
+//   }
+//   } -->
 
 
-	if($totalpage > $currentpage  )
-	{
-		$nxt = $currentpage+1;
-		echo "<li><a  href='manage-users.php?page=".$nxt."' >></a></li>";
-	}
+<!-- // 	if($totalpage > $currentpage  )
+// 	{
+// 		$nxt = $currentpage+1;
+// 		echo "<li><a  href='manage-users.php?page=".$nxt."' >></a></li>";
+// 	}
 
-	 echo "<li><a>Total Pages:".$totalpage."</a></li>";
-}
+// 	 echo "<li><a>Total Pages:".$totalpage."</a></li>";
+// } -->
 
- ?>
+ 
 </ul>
 </div>
         <footer class="text-right">

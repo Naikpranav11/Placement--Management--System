@@ -156,9 +156,9 @@ print "</tr>";
 
   <div class="pagination-wrap">
     <ul class="pagination">
-			  <?php
+			
 
-$num_rec_per_page=15;
+<!-- $num_rec_per_page=15;
 $connect = mysqli_connect('localhost','root','','details');
 // mysql_select_db('details');
 $sql = "SELECT * FROM basicdetails where Approve='1' ";
@@ -198,7 +198,7 @@ $prev = $currentpage-1;
 
 	 echo "<li><a>Total Pages:".$totalpage."</a></li>";
 }
- ?>
+  -->
 </ul>
 </div>
           <footer class="text-right">
