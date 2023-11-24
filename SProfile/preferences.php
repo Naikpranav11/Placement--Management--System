@@ -123,7 +123,7 @@ $drivesResult = $conn->query($drivesQuery);
               <a href="dhome.php"><i class="fa fa-bar-chart fa-fw"></i>Placement Drives</a>
             </li>
             <li>
-              <a href="#" class="active"><i class="fa fa-sliders fa-fw"></i>Preferences</a>
+              <!-- <a href="#" class="active"><i class="fa fa-sliders fa-fw"></i>Preferences</a> -->
             </li>
             <li>
               <a href="logout.php"><i class="fa fa-eject fa-fw"></i>Sign Out</a>
@@ -138,10 +138,10 @@ $drivesResult = $conn->query($drivesQuery);
             <nav class="templatemo-top-nav col-lg-12 col-md-12">
               <ul class="text-uppercase">
                 <li>
-                  <a href="../../Homepage/index.html" >Home DBCE</a>
+                  <a href="../Homepage/index.html" >Home DBCE</a>
                 </li>
                 <li>
-                  <a href="">Drives Homepage</a>
+                  <a href="../Drives/products.php">Drives Homepage</a>
                 </li>
                 <li>
                   <a href="">Overview</a>

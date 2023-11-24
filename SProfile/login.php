@@ -66,7 +66,7 @@
               <a href="dhome.php"><i class="fa fa-bar-chart fa-fw"></i>Placement Drives</a>
             </li>
             <li>
-              <a href="preferences.php"><i class="fa fa-sliders fa-fw"></i>Preferences</a>
+              <a href="preferences.php"><i class="fa fa-sliders fa-fw"></i>Apply</a>
             </li>
             <li>
               <a href="logout.php"><i class="fa fa-eject fa-fw"></i>Sign Out</a>
@@ -87,7 +87,7 @@
                   <a href="../Drives/index.php">Drives Homepage</a>
                 </li>
                 <li>
-                  <a href="Notif.php">Notifications</a>
+                  <!-- <a href="Notif.php">Notifications</a> -->
                 </li>
                 <li>
                   <a href="Change Password.php">Change Password</a>

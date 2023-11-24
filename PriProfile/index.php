@@ -71,7 +71,7 @@
 					<h3>NAVIGATION</h3>
 					<ul>
 						<li>
-							<a href="../../Homepage/index.php">Home</a>
+							<a href="../Homepage/index.php">Home</a>
 						</li>
 						<li>
 							<a href="../SProfile/index.php">Student Login</a>
@@ -80,7 +80,7 @@
 							<a href="../PProfile/index.php">Placement Login</a>
 						</li>
 						<li>
-							<a href="../HODProfile/index.php">HOD Login</a>
+							<a href="../HRProfile/index.php">HR Login</a>
 						</li>
 						<li>
 							<a href="../PriProfile/index.php">Principal Login</a>

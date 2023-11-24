@@ -68,7 +68,7 @@ if (isset($_SESSION['success_message'])) {
           <ul>
           <li><a href="index.php" ><i class="fa fa-home fa-fw"></i>Dashboard</a></li>
             <li><a href="Students Eligibility.php" class="active"><i class="fa fa-bar-chart fa-fw"></i> Add users</a></li>
-            <li><a href="queries.php"><i class="fa fa-database fa-fw"></i>Queries</a></li>
+            <!-- <li><a href="queries.php"><i class="fa fa-database fa-fw"></i>Queries</a></li> -->
             <li><a href="manage-users.php" ><i class="fa fa-users fa-fw"></i>Student Details</a></li>
             <li><a href="logout.php"><i class="fa fa-eject fa-fw"></i>Sign Out</a></li>
           </ul>
@@ -81,7 +81,7 @@ if (isset($_SESSION['success_message'])) {
             <nav class="templatemo-top-nav col-lg-12 col-md-12">
               <ul class="text-uppercase">
                   <li>
-                  <a href="../../Homepage/index.php">Home</a>
+                  <a href="../Homepage/index.php">Home</a>
                 </li>
                 <li>
                   <a href="dhome1.php">Drives Homepage</a>

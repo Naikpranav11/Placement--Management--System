@@ -61,7 +61,7 @@
           <ul>
           <li><a href="login.php" class="active"><i class="fa fa-home fa-fw" class="active"></i>Dashboard</a></li>
           <li><a href="Students Eligibility.php" class="active"><i class="fa fa-bar-chart fa-fw"></i> Add users</a></li>
-            <li><a href="queries.php"><i class="fa fa-database fa-fw"></i>Queries</a></li>
+            <!-- <li><a href="queries.php"><i class="fa fa-database fa-fw"></i>Queries</a></li> -->
             <li><a href="manage-users.php" ><i class="fa fa-users fa-fw"></i>Student Details</a></li>
             <li><a href="logout.php"><i class="fa fa-eject fa-fw"></i>Sign Out</a></li>
           </ul>
@@ -74,10 +74,10 @@
             <nav class="templatemo-top-nav col-lg-12 col-md-12">
               <ul class="text-uppercase">
                    <li>
-                  <a href="../../Homepage/index.php">Home DBCE</a>
+                  <a href="../Homepage/index.php">Home DBCE</a>
                 </li>
                 <li>
-                  <a href="../../Drives/index.php">Drives Homepage</a>
+                  <a href="../Drives/index.php">Drives Homepage</a>
                 </li>
                 <!-- <li>
                   <a href="Notif.php">Notification</a>
@@ -149,26 +149,25 @@
                     </a>
                   </div>
                   <div class="media-body">
-                    <h2 class="media-heading text-uppercase">Drive Results</h2>
+                    <!-- <h2 class="media-heading text-uppercase">Drive Results</h2>
                     <p>Latest Drive Result Overview</p>
-                    <?php
-$connect = mysqli_connect('localhost','root','','details');
-// mysql_select_db('details');
-$RESULT=$connect->query("SELECT DISTINCT count(CompanyName) from addpdrive where PVenue LIKE '%CIT%' AND YEAR(Date)=YEAR(NOW())");
-$data=$RESULT->fetch_assoc();
-echo "<br><br><h3>Companies In Our Campus In This Year&nbsp:&nbsp";
-echo $data['count(CompanyName)'];
-$RESULT=$connect->query("SELECT count(Attendence) from updatedrive where Attendence=1 AND YEAR(Date)=YEAR(NOW())");
-$data=$RESULT->fetch_assoc();
-echo "<br><BR>Number of Students Attended In This Year&nbsp:&nbsp";
-echo $data['count(Attendence)'];
-$RESULT=$connect->query("SELECT count(Placed) from updatedrive where Placed=1 AND YEAR(Date)=YEAR(NOW())");
-$data=$RESULT->fetch_assoc();
-echo "<BR><br>Number of Students Placed In This Year&nbsp:&nbsp";
-echo $data['count(Placed)'];
-echo "</h3>";
-?>
-                  </div>
+                    
+// $connect = mysqli_connect('localhost','root','','details');
+// // mysql_select_db('details');
+// $RESULT=$connect->query("SELECT DISTINCT count(CompanyName) from addpdrive where PVenue LIKE '%CIT%' AND YEAR(Date)=YEAR(NOW())");
+// $data=$RESULT->fetch_assoc();
+// echo "<br><br><h3>Companies In Our Campus In This Year&nbsp:&nbsp";
+// echo $data['count(CompanyName)'];
+// $RESULT=$connect->query("SELECT count(Attendence) from updatedrive where Attendence=1 AND YEAR(Date)=YEAR(NOW())");
+// $data=$RESULT->fetch_assoc();
+// echo "<br><BR>Number of Students Attended In This Year&nbsp:&nbsp";
+// echo $data['count(Attendence)'];
+// $RESULT=$connect->query("SELECT count(Placed) from updatedrive where Placed=1 AND YEAR(Date)=YEAR(NOW())");
+// $data=$RESULT->fetch_assoc();
+// echo "<BR><br>Number of Students Placed In This Year&nbsp:&nbsp";
+// echo $data['count(Placed)'];
+// echo "</h3>";
+//                   </div> -->
                 </div>
               </div>
             </div>
