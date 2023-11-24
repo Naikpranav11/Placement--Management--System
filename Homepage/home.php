@@ -54,7 +54,7 @@
                             <a class="page-scroll" href="../SProfile/index.php">Student Login</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="../HODProfile/index.php">HR Login</a>
+                            <a class="page-scroll" href="../HRProfile/index.php">HR Login</a>
                         </li>
                         <li>
                             <a class="page-scroll" href="../PProfile/index.php">Placement Login</a>
