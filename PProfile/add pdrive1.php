@@ -1,26 +1,27 @@
 <?php
-$connect = mysql_connect("localhost", "root", ""); // Establishing Connection with Server
-mysql_select_db("details"); // Selecting Database from Server
+// Assuming you have a database connection established
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "details";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 if(isset($_POST['submit']))
 { 
 $cname = $_POST['compny'];
 $date = $_POST['date'];
-$campool = $_POST['campool'];
-$poolven = $_POST['pcv'];
-$per = $_POST['sslc'];
-$puagg = $_POST['puagg'];
-$beaggregate = $_POST['beagg'];
-$back = $_POST['curback'];
-$hisofbk = $_POST['hob'];
-$breakstud = $_POST['break'];
-$otherdet = $_POST['odetails'];
-if($cname !=''||$date !='')
-{
-    if($query = mysql_query("INSERT INTO addpdrive(CompanyName, Date, campusPool, poolcampusVenue, SSLCAgg, PUDIPLOMAgg, BEAgg, CurrentBacklogs, HistoryBacklogs, BreakStudies, otherDetails)
-		VALUES ('$cname', '$date', '$campool', '$poolven', '$per', '$puagg', '$beaggregate', '$back', '$hisofbk', '$breakstud', '$otherdet')")){
-                      echo "<center>Drive Inserted successfully</center>";
-		}
-		else die("FAILED");
+$ctc = $_POST['ctc'];
+$interview = $_POST['interview'];
+$required_cgpa = $_POST['required_cgpa'];
+
+
+$insert = "INSERT INTO pdrive(CompanyName, Date, ctc, interview, required_cgpa) VALUES ('$cname', '$date', '$ctc', '$interview', '$required_cgpa')";
+
+if ($conn->query($insertQuery) === TRUE) {
+	$_SESSION['success_message'] = "Data inserted successfully!";
+} else {
+	$_SESSION['error_message'] = "Error: " . $insertQuery . "<br>" . $conn->error;
 }
 }
 ?>

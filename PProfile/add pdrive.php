@@ -110,7 +110,7 @@
                 </div> -->
                 <div class="col-lg-6 col-md-6 form-group">
                   <label for="ctc">CTC</label>
-                  <input type="text" name="pcv" class="form-control" id="ctc" placeholder="ctc">
+                  <input type="text" name="ctc" class="form-control" id="ctc" placeholder="ctc">
                 </div>
 				<div class="col-lg-6 col-md-6 form-group">
                   <label for="interview">Interview Date</label>
